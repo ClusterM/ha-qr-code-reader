@@ -1,0 +1,56 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Léitheoir cóid QR",
+        "description": "Roghnaigh an ceamara agus cé chomh minic a scanadh. Cumasaigh cosán réamhphróiseála amháin ar a laghad.",
+        "data": {
+          "entity_id": "Ceamara",
+          "name": "Ainm (roghnach)",
+          "scan_interval": "Eatramh scanadh uathoibríoch",
+          "use_original": "Íomhá dath bunaidh",
+          "use_grayscale_enhancements": "Liathscála agus feabhsuithe (uathchodarsnacht, cothromú, Otsu)",
+          "use_scaled": "Athróga scálaithe (mall)",
+          "qr_only": "Déan neamhaird de bharrachóid"
+        },
+        "data_description": {
+          "entity_id": "Ceamara a sholáthraíonn frámaí fós le haghaidh díchódaithe.",
+          "name": "Má tá sé folamh, gintear ainm an aonáin go huathoibríoch (m.sh. cabhsa QR).",
+          "scan_interval": "Soicind idir pictiúir uathoibríocha. Úsáid 0 gan aon scananna uathoibríocha; truicear image_processing.scan de láimh nuair is gá.",
+          "use_original": "Bain triail as cód QR a léamh ón bhfráma ar dtús, gan réamhphróiseáil.",
+          "use_grayscale_enhancements": "Bain triail as feabhsuithe íomhá bunúsacha roimh scanadh (uathchodarsnacht, comhionannú histeagram, tairseach Otsu).",
+          "use_scaled": "Bain triail as leaganacha athscála iolracha; LAP-trom. I gcás íomhánna an-lag amháin ar chrua-earraí cumasacha.",
+          "qr_only": "Nuair atá sé cumasaithe, ní dhéantar ach cóid QR a dhíchódú; ní dhéantar barrachóid de chineálacha eile."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Cumasaigh grúpa réamhphróiseála amháin ar a laghad (íomhá bhunaidh, feabhsúcháin liathscála, nó scálaithe)."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Roghanna QR Code Reader",
+        "description": "Coigeartaigh iompar scanadh. Cumasaigh cosán réamhphróiseála amháin ar a laghad.",
+        "data": {
+          "scan_interval": "Eatramh scanadh uathoibríoch",
+          "use_original": "Íomhá dath bunaidh",
+          "use_grayscale_enhancements": "Liathscála agus feabhsuithe (uathchodarsnacht, cothromú, Otsu)",
+          "use_scaled": "Athróga scálaithe (mall)",
+          "qr_only": "Déan neamhaird de bharrachóid"
+        },
+        "data_description": {
+          "scan_interval": "Soicind idir pictiúir uathoibríocha. Úsáid 0 gan aon scananna uathoibríocha; truicear image_processing.scan de láimh nuair is gá.",
+          "use_original": "Bain triail as cód QR a léamh ón bhfráma ar dtús, gan réamhphróiseáil.",
+          "use_grayscale_enhancements": "Bain triail as feabhsuithe íomhá bunúsacha roimh scanadh (uathchodarsnacht, comhionannú histeagram, tairseach Otsu).",
+          "use_scaled": "Bain triail as leaganacha athscála iolracha; LAP-trom. I gcás íomhánna an-lag amháin ar chrua-earraí cumasacha.",
+          "qr_only": "Nuair atá sé cumasaithe, ní dhéantar ach cóid QR a dhíchódú; ní dhéantar barrachóid de chineálacha eile."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Cumasaigh grúpa réamhphróiseála amháin ar a laghad (íomhá bhunaidh, feabhsúcháin liathscála, nó scálaithe)."
+    }
+  }
+}

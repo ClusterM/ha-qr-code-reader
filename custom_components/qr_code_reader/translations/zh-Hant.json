@@ -1,0 +1,56 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "QR 圖碼閱讀器",
+        "description": "選擇相機和掃描頻率。啟用至少一個預處理路徑。",
+        "data": {
+          "entity_id": "相機",
+          "name": "姓名（可選）",
+          "scan_interval": "自動掃描間隔",
+          "use_original": "原始彩色影像",
+          "use_grayscale_enhancements": "灰階和增強（自動對比、均衡、Otsu）",
+          "use_scaled": "縮放變體（慢）",
+          "qr_only": "忽略條碼"
+        },
+        "data_description": {
+          "entity_id": "提供靜態影格進行解碼的相機。",
+          "name": "如果為空，則自動產生實體名稱（例如 QR 車道）。",
+          "scan_interval": "自動快照之間的秒數。使用 0 表示不自動掃描；需要時手動觸發 image_processing.scan 。",
+          "use_original": "嘗試先從框架中讀取二維碼，而不進行預處理。",
+          "use_grayscale_enhancements": "在掃描之前嘗試基本的影像改進（自動對比度、直方圖均衡、Otsu 閾值）。",
+          "use_scaled": "嘗試多個重新縮放的版本； CPU 重。僅適用於功能強大的硬體上非常差的影像。",
+          "qr_only": "啟用後，僅解碼 QR 碼；其他條碼類型將被跳過。"
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "啟用至少一組預處理（原始影像、灰階增強或縮放）。"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "QR 碼閱讀器選項",
+        "description": "調整掃描行為。啟用至少一個預處理路徑。",
+        "data": {
+          "scan_interval": "自動掃描間隔",
+          "use_original": "原始彩色影像",
+          "use_grayscale_enhancements": "灰階和增強（自動對比、均衡、Otsu）",
+          "use_scaled": "縮放變體（慢）",
+          "qr_only": "忽略條碼"
+        },
+        "data_description": {
+          "scan_interval": "自動快照之間的秒數。使用 0 表示不自動掃描；需要時手動觸發 image_processing.scan 。",
+          "use_original": "嘗試先從框架中讀取二維碼，而不進行預處理。",
+          "use_grayscale_enhancements": "在掃描之前嘗試基本的影像改進（自動對比度、直方圖均衡、Otsu 閾值）。",
+          "use_scaled": "嘗試多個重新縮放的版本； CPU 重。僅適用於功能強大的硬體上非常差的影像。",
+          "qr_only": "啟用後，僅解碼 QR 碼；其他條碼類型將被跳過。"
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "啟用至少一組預處理（原始影像、灰階增強或縮放）。"
+    }
+  }
+}

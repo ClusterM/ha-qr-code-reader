@@ -1,0 +1,56 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "QR-koodin lukija",
+        "description": "Valitse kamera ja kuinka usein skannaat. Ota käyttöön vähintään yksi esikäsittelypolku.",
+        "data": {
+          "entity_id": "Kamera",
+          "name": "Nimi (valinnainen)",
+          "scan_interval": "Automaattinen skannausväli",
+          "use_original": "Alkuperäinen värikuva",
+          "use_grayscale_enhancements": "Harmaasävyt ja parannukset (autokontrasti, taajuuskorjaus, Otsu)",
+          "use_scaled": "Skaalatut muunnelmat (hidas)",
+          "qr_only": "Ohita viivakoodit"
+        },
+        "data_description": {
+          "entity_id": "Kamera, joka tarjoaa still-kehykset dekoodausta varten.",
+          "name": "Jos tyhjä, entiteetin nimi luodaan automaattisesti (esim. QR-ajotieltä).",
+          "scan_interval": "Sekuntia automaattisten tilannekuvien välillä. Käytä arvoa 0, jos et tarvitse automaattisia skannauksia; käynnistä image_processing.scan manuaalisesti tarvittaessa.",
+          "use_original": "Yritä ensin lukea QR-koodi kehyksestä ilman esikäsittelyä.",
+          "use_grayscale_enhancements": "Kokeile peruskuvaparannuksia ennen skannausta (autokontrasti, histogrammin tasoitus, Otsu-kynnys).",
+          "use_scaled": "Kokeile useita uudelleenskaalattuja versioita; Prosessoriraskas. Vain erittäin huonoille kuville sopivalla laitteistolla.",
+          "qr_only": "Kun tämä on käytössä, vain QR-koodit puretaan; muut viivakoodityypit ohitetaan."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Ota käyttöön vähintään yksi esikäsittelyryhmä (alkuperäinen kuva, harmaasävyparannukset tai skaalattu)."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "QR-koodinlukijan vaihtoehdot",
+        "description": "Säädä skannauskäyttäytymistä. Ota käyttöön vähintään yksi esikäsittelypolku.",
+        "data": {
+          "scan_interval": "Automaattinen skannausväli",
+          "use_original": "Alkuperäinen värikuva",
+          "use_grayscale_enhancements": "Harmaasävyt ja parannukset (autokontrasti, taajuuskorjaus, Otsu)",
+          "use_scaled": "Skaalatut muunnelmat (hidas)",
+          "qr_only": "Ohita viivakoodit"
+        },
+        "data_description": {
+          "scan_interval": "Sekuntia automaattisten tilannekuvien välillä. Käytä arvoa 0, jos et tarvitse automaattisia skannauksia; käynnistä image_processing.scan manuaalisesti tarvittaessa.",
+          "use_original": "Yritä ensin lukea QR-koodi kehyksestä ilman esikäsittelyä.",
+          "use_grayscale_enhancements": "Kokeile peruskuvaparannuksia ennen skannausta (autokontrasti, histogrammin tasoitus, Otsu-kynnys).",
+          "use_scaled": "Kokeile useita uudelleenskaalattuja versioita; Prosessoriraskas. Vain erittäin huonoille kuville sopivalla laitteistolla.",
+          "qr_only": "Kun tämä on käytössä, vain QR-koodit puretaan; muut viivakoodityypit ohitetaan."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Ota käyttöön vähintään yksi esikäsittelyryhmä (alkuperäinen kuva, harmaasävyparannukset tai skaalattu)."
+    }
+  }
+}

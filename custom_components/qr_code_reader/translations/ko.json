@@ -1,0 +1,56 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "QR 코드 리더",
+        "description": "카메라와 스캔 빈도를 선택하세요. 하나 이상의 전처리 경로를 활성화합니다.",
+        "data": {
+          "entity_id": "카메라",
+          "name": "이름(선택사항)",
+          "scan_interval": "자동 검사 간격",
+          "use_original": "원본 컬러 이미지",
+          "use_grayscale_enhancements": "그레이스케일 및 개선 사항(자동 대비, 균등화, Otsu)",
+          "use_scaled": "확장된 변형(느림)",
+          "qr_only": "바코드 무시"
+        },
+        "data_description": {
+          "entity_id": "디코딩을 위한 스틸 프레임을 제공하는 카메라입니다.",
+          "name": "비어 있으면 엔터티 이름이 자동으로 생성됩니다(예: QR 진입로).",
+          "scan_interval": "자동 스냅샷 간격(초)입니다. 자동 검색을 수행하지 않으려면 0을 사용하십시오. 필요할 때 image_processing.scan을 수동으로 트리거합니다.",
+          "use_original": "전처리 없이 먼저 프레임에서 QR 코드를 읽어보세요.",
+          "use_grayscale_enhancements": "스캔하기 전에 기본적인 이미지 개선을 시도해 보십시오(자동 대비, 히스토그램 균등화, Otsu 임계값).",
+          "use_scaled": "여러 가지 크기가 조정된 버전을 사용해 보세요. CPU가 무겁습니다. 가능한 하드웨어의 이미지 품질이 매우 낮은 경우에만 해당됩니다.",
+          "qr_only": "활성화되면 QR 코드만 디코딩됩니다. 다른 바코드 유형은 건너뜁니다."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "하나 이상의 전처리 그룹(원본 이미지, 회색조 향상 또는 크기 조정)을 활성화합니다."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "QR 코드 리더 옵션",
+        "description": "스캔 동작을 조정합니다. 하나 이상의 전처리 경로를 활성화합니다.",
+        "data": {
+          "scan_interval": "자동 검사 간격",
+          "use_original": "원본 컬러 이미지",
+          "use_grayscale_enhancements": "그레이스케일 및 개선 사항(자동 대비, 균등화, Otsu)",
+          "use_scaled": "확장된 변형(느림)",
+          "qr_only": "바코드 무시"
+        },
+        "data_description": {
+          "scan_interval": "자동 스냅샷 간격(초)입니다. 자동 검색을 수행하지 않으려면 0을 사용하십시오. 필요할 때 image_processing.scan을 수동으로 트리거합니다.",
+          "use_original": "전처리 없이 먼저 프레임에서 QR 코드를 읽어보세요.",
+          "use_grayscale_enhancements": "스캔하기 전에 기본적인 이미지 개선을 시도해 보십시오(자동 대비, 히스토그램 균등화, Otsu 임계값).",
+          "use_scaled": "여러 가지 크기가 조정된 버전을 사용해 보세요. CPU가 무겁습니다. 가능한 하드웨어의 이미지 품질이 매우 낮은 경우에만 해당됩니다.",
+          "qr_only": "활성화되면 QR 코드만 디코딩됩니다. 다른 바코드 유형은 건너뜁니다."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "하나 이상의 전처리 그룹(원본 이미지, 회색조 향상 또는 크기 조정)을 활성화합니다."
+    }
+  }
+}

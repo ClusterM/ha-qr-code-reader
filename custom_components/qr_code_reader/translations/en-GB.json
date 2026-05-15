@@ -1,0 +1,56 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "QR Code Reader",
+        "description": "Choose the camera and how often to scan. Enable at least one preprocessing path.",
+        "data": {
+          "entity_id": "Camera",
+          "name": "Name (optional)",
+          "scan_interval": "Automatic scan interval",
+          "use_original": "Original color image",
+          "use_grayscale_enhancements": "Grayscale and enhancements (autocontrast, equalize, Otsu)",
+          "use_scaled": "Scaled variants (slow)",
+          "qr_only": "Ignore barcodes"
+        },
+        "data_description": {
+          "entity_id": "Camera that provides still frames for decoding.",
+          "name": "If empty, the entity name is generated automatically (e.g. QR driveway).",
+          "scan_interval": "Seconds between automatic snapshots. Use 0 for no automatic scans; trigger image_processing.scan manually when needed.",
+          "use_original": "Try reading a QR code from the frame first, without preprocessing.",
+          "use_grayscale_enhancements": "Try basic image improvements before scanning (autocontrast, histogram equalize, Otsu threshold).",
+          "use_scaled": "Try multiple rescaled versions; CPU-heavy. Only for very poor images on capable hardware.",
+          "qr_only": "When enabled, only QR codes are decoded; other barcode types are skipped."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Enable at least one preprocessing group (original image, grayscale enhancements, or scaled)."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "QR Code Reader options",
+        "description": "Adjust scanning behavior. Enable at least one preprocessing path.",
+        "data": {
+          "scan_interval": "Automatic scan interval",
+          "use_original": "Original color image",
+          "use_grayscale_enhancements": "Grayscale and enhancements (autocontrast, equalize, Otsu)",
+          "use_scaled": "Scaled variants (slow)",
+          "qr_only": "Ignore barcodes"
+        },
+        "data_description": {
+          "scan_interval": "Seconds between automatic snapshots. Use 0 for no automatic scans; trigger image_processing.scan manually when needed.",
+          "use_original": "Try reading a QR code from the frame first, without preprocessing.",
+          "use_grayscale_enhancements": "Try basic image improvements before scanning (autocontrast, histogram equalize, Otsu threshold).",
+          "use_scaled": "Try multiple rescaled versions; CPU-heavy. Only for very poor images on capable hardware.",
+          "qr_only": "When enabled, only QR codes are decoded; other barcode types are skipped."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Enable at least one preprocessing group (original image, grayscale enhancements, or scaled)."
+    }
+  }
+}

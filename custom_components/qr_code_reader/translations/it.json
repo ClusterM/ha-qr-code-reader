@@ -1,0 +1,56 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Lettore di codici QR",
+        "description": "Scegli la fotocamera e la frequenza con cui eseguire la scansione. Abilita almeno un percorso di preelaborazione.",
+        "data": {
+          "entity_id": "Telecamera",
+          "name": "Nome (facoltativo)",
+          "scan_interval": "Intervallo di scansione automatica",
+          "use_original": "Immagine a colori originale",
+          "use_grayscale_enhancements": "Scala di grigi e miglioramenti (contrasto automatico, equalizzazione, Otsu)",
+          "use_scaled": "Varianti in scala (lente)",
+          "qr_only": "Ignora i codici a barre"
+        },
+        "data_description": {
+          "entity_id": "Fotocamera che fornisce fotogrammi fissi per la decodifica.",
+          "name": "Se vuoto, il nome dell'entità viene generato automaticamente (es. Vialetto QR).",
+          "scan_interval": "Secondi tra gli snapshot automatici. Utilizzare 0 per nessuna scansione automatica; attivare image_processing.scan manualmente quando necessario.",
+          "use_original": "Prova prima a leggere un codice QR dal frame, senza pre-elaborazione.",
+          "use_grayscale_enhancements": "Prova i miglioramenti di base dell'immagine prima della scansione (contrasto automatico, equalizzazione dell'istogramma, soglia Otsu).",
+          "use_scaled": "Prova più versioni ridimensionate; CPU pesante. Solo per immagini molto scadenti su hardware compatibile.",
+          "qr_only": "Se abilitato, vengono decodificati solo i codici QR; gli altri tipi di codici a barre vengono saltati."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Abilita almeno un gruppo di preelaborazione (immagine originale, miglioramenti in scala di grigi o ridimensionata)."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Opzioni del lettore di codici QR",
+        "description": "Adjust scanning behavior. Abilita almeno un percorso di preelaborazione.",
+        "data": {
+          "scan_interval": "Intervallo di scansione automatica",
+          "use_original": "Immagine a colori originale",
+          "use_grayscale_enhancements": "Scala di grigi e miglioramenti (contrasto automatico, equalizzazione, Otsu)",
+          "use_scaled": "Varianti in scala (lente)",
+          "qr_only": "Ignora i codici a barre"
+        },
+        "data_description": {
+          "scan_interval": "Secondi tra gli snapshot automatici. Utilizzare 0 per nessuna scansione automatica; attivare image_processing.scan manualmente quando necessario.",
+          "use_original": "Prova prima a leggere un codice QR dal frame, senza pre-elaborazione.",
+          "use_grayscale_enhancements": "Prova i miglioramenti di base dell'immagine prima della scansione (contrasto automatico, equalizzazione dell'istogramma, soglia Otsu).",
+          "use_scaled": "Prova più versioni ridimensionate; CPU pesante. Solo per immagini molto scadenti su hardware compatibile.",
+          "qr_only": "Se abilitato, vengono decodificati solo i codici QR; gli altri tipi di codici a barre vengono saltati."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Abilita almeno un gruppo di preelaborazione (immagine originale, miglioramenti in scala di grigi o ridimensionata)."
+    }
+  }
+}

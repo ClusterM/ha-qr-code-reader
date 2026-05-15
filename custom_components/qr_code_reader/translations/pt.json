@@ -1,0 +1,56 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Leitor de código QR",
+        "description": "Escolha a câmera e com que frequência digitalizar. Habilite pelo menos um caminho de pré-processamento.",
+        "data": {
+          "entity_id": "Câmera",
+          "name": "Nome (opcional)",
+          "scan_interval": "Intervalo de verificação automática",
+          "use_original": "Imagem colorida original",
+          "use_grayscale_enhancements": "Tons de cinza e melhorias (autocontraste, equalização, Otsu)",
+          "use_scaled": "Variantes em escala (lentas)",
+          "qr_only": "Ignorar códigos de barras"
+        },
+        "data_description": {
+          "entity_id": "Câmera que fornece quadros estáticos para decodificação.",
+          "name": "Se estiver vazio, o nome da entidade é gerado automaticamente (por exemplo, entrada de automóveis QR).",
+          "scan_interval": "Segundos entre instantâneos automáticos. Use 0 para nenhuma verificação automática; acione image_processing.scan manualmente quando necessário.",
+          "use_original": "Tente primeiro ler um código QR do quadro, sem pré-processamento.",
+          "use_grayscale_enhancements": "Experimente melhorias básicas de imagem antes da digitalização (autocontraste, equalização de histograma, limite de Otsu).",
+          "use_scaled": "Experimente várias versões redimensionadas; CPU pesada. Somente para imagens muito ruins em hardware compatível.",
+          "qr_only": "Quando ativado, apenas os códigos QR são decodificados; outros tipos de código de barras são ignorados."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Ative pelo menos um grupo de pré-processamento (imagem original, aprimoramentos em escala de cinza ou dimensionado)."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Opções do leitor de código QR",
+        "description": "Ajuste o comportamento de digitalização. Habilite pelo menos um caminho de pré-processamento.",
+        "data": {
+          "scan_interval": "Intervalo de verificação automática",
+          "use_original": "Imagem colorida original",
+          "use_grayscale_enhancements": "Tons de cinza e melhorias (autocontraste, equalização, Otsu)",
+          "use_scaled": "Variantes em escala (lentas)",
+          "qr_only": "Ignorar códigos de barras"
+        },
+        "data_description": {
+          "scan_interval": "Segundos entre instantâneos automáticos. Use 0 para nenhuma verificação automática; acione image_processing.scan manualmente quando necessário.",
+          "use_original": "Tente primeiro ler um código QR do quadro, sem pré-processamento.",
+          "use_grayscale_enhancements": "Experimente melhorias básicas de imagem antes da digitalização (autocontraste, equalização de histograma, limite de Otsu).",
+          "use_scaled": "Experimente várias versões redimensionadas; CPU pesada. Somente para imagens muito ruins em hardware compatível.",
+          "qr_only": "Quando ativado, apenas os códigos QR são decodificados; outros tipos de código de barras são ignorados."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Ative pelo menos um grupo de pré-processamento (imagem original, aprimoramentos em escala de cinza ou dimensionado)."
+    }
+  }
+}

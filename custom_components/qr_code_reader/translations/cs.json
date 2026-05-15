@@ -1,0 +1,56 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Čtečka QR kódů",
+        "description": "Vyberte fotoaparát a jak často skenovat. Povolit alespoň jednu cestu předběžného zpracování.",
+        "data": {
+          "entity_id": "Fotoaparát",
+          "name": "Jméno (volitelné)",
+          "scan_interval": "Interval automatického skenování",
+          "use_original": "Originální barevný obrázek",
+          "use_grayscale_enhancements": "Stupně šedi a vylepšení (automatický kontrast, vyrovnání, Otsu)",
+          "use_scaled": "Škálované varianty (pomalé)",
+          "qr_only": "Ignorujte čárové kódy"
+        },
+        "data_description": {
+          "entity_id": "Fotoaparát, který poskytuje statické snímky pro dekódování.",
+          "name": "Pokud je prázdné, název entity se vygeneruje automaticky (např. QR příjezdová cesta).",
+          "scan_interval": "Sekundy mezi automatickými snímky. Použijte 0 pro žádné automatické skenování; v případě potřeby spustit image_processing.scan ručně.",
+          "use_original": "Zkuste nejprve přečíst QR kód z rámce bez předběžného zpracování.",
+          "use_grayscale_enhancements": "Před skenováním vyzkoušejte základní vylepšení obrazu (autokontrast, vyrovnání histogramu, práh Otsu).",
+          "use_scaled": "Vyzkoušejte více upravených verzí; CPU náročné. Pouze pro velmi špatný obraz na schopném hardwaru.",
+          "qr_only": "Když je povoleno, dekódují se pouze QR kódy; ostatní typy čárových kódů jsou přeskočeny."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Povolit alespoň jednu skupinu předběžného zpracování (původní obrázek, vylepšení ve stupních šedi nebo zmenšený)."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Možnosti čtečky QR kódů",
+        "description": "Upravte chování skenování. Povolit alespoň jednu cestu předběžného zpracování.",
+        "data": {
+          "scan_interval": "Interval automatického skenování",
+          "use_original": "Originální barevný obrázek",
+          "use_grayscale_enhancements": "Stupně šedi a vylepšení (automatický kontrast, vyrovnání, Otsu)",
+          "use_scaled": "Škálované varianty (pomalé)",
+          "qr_only": "Ignorujte čárové kódy"
+        },
+        "data_description": {
+          "scan_interval": "Sekundy mezi automatickými snímky. Použijte 0 pro žádné automatické skenování; v případě potřeby spustit image_processing.scan ručně.",
+          "use_original": "Zkuste nejprve přečíst QR kód z rámce bez předběžného zpracování.",
+          "use_grayscale_enhancements": "Před skenováním vyzkoušejte základní vylepšení obrazu (autokontrast, vyrovnání histogramu, práh Otsu).",
+          "use_scaled": "Vyzkoušejte více upravených verzí; CPU náročné. Pouze pro velmi špatný obraz na schopném hardwaru.",
+          "qr_only": "Když je povoleno, dekódují se pouze QR kódy; ostatní typy čárových kódů jsou přeskočeny."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Povolit alespoň jednu skupinu předběžného zpracování (původní obrázek, vylepšení ve stupních šedi nebo zmenšený)."
+    }
+  }
+}

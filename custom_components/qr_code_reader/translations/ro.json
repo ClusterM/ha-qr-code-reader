@@ -1,0 +1,56 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Cititor de coduri QR",
+        "description": "Alegeți camera și cât de des să scanați. Activați cel puțin o cale de preprocesare.",
+        "data": {
+          "entity_id": "Camera foto",
+          "name": "Nume (opțional)",
+          "scan_interval": "Interval automat de scanare",
+          "use_original": "Imagine color originală",
+          "use_grayscale_enhancements": "Tonuri de gri și îmbunătățiri (contrast automat, egalizare, Otsu)",
+          "use_scaled": "Variante la scară (lent)",
+          "qr_only": "Ignora codurile de bare"
+        },
+        "data_description": {
+          "entity_id": "Cameră care oferă cadre statice pentru decodare.",
+          "name": "Dacă este gol, numele entității este generat automat (de exemplu, calea QR).",
+          "scan_interval": "Secunde între instantaneele automate. Utilizați 0 pentru nicio scanare automată; declanșează image_processing.scan manual atunci când este necesar.",
+          "use_original": "Încercați să citiți mai întâi un cod QR din cadru, fără preprocesare.",
+          "use_grayscale_enhancements": "Încercați îmbunătățiri de bază ale imaginii înainte de scanare (contrast automat, egalizare histogramă, prag Otsu).",
+          "use_scaled": "Încercați mai multe versiuni redimensionate; CPU-greu. Doar pentru imagini foarte slabe pe hardware capabil.",
+          "qr_only": "Când este activat, sunt decodificate numai codurile QR; alte tipuri de coduri de bare sunt omise."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Activați cel puțin un grup de preprocesare (imagine originală, îmbunătățiri în tonuri de gri sau scalate)."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Opțiuni pentru cititorul de coduri QR",
+        "description": "Ajustați comportamentul de scanare. Activați cel puțin o cale de preprocesare.",
+        "data": {
+          "scan_interval": "Interval automat de scanare",
+          "use_original": "Imagine color originală",
+          "use_grayscale_enhancements": "Tonuri de gri și îmbunătățiri (contrast automat, egalizare, Otsu)",
+          "use_scaled": "Variante la scară (lent)",
+          "qr_only": "Ignora codurile de bare"
+        },
+        "data_description": {
+          "scan_interval": "Secunde între instantaneele automate. Utilizați 0 pentru nicio scanare automată; declanșează image_processing.scan manual atunci când este necesar.",
+          "use_original": "Încercați să citiți mai întâi un cod QR din cadru, fără preprocesare.",
+          "use_grayscale_enhancements": "Încercați îmbunătățiri de bază ale imaginii înainte de scanare (contrast automat, egalizare histogramă, prag Otsu).",
+          "use_scaled": "Încercați mai multe versiuni redimensionate; CPU-greu. Doar pentru imagini foarte slabe pe hardware capabil.",
+          "qr_only": "Când este activat, sunt decodificate numai codurile QR; alte tipuri de coduri de bare sunt omise."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Activați cel puțin un grup de preprocesare (imagine originală, îmbunătățiri în tonuri de gri sau scalate)."
+    }
+  }
+}

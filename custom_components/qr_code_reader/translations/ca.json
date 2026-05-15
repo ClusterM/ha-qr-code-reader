@@ -1,0 +1,56 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Lector de codis QR",
+        "description": "Trieu la càmera i amb quina freqüència voleu escanejar. Habiliteu almenys una ruta de preprocessament.",
+        "data": {
+          "entity_id": "Càmera",
+          "name": "Nom (opcional)",
+          "scan_interval": "Interval d'exploració automàtica",
+          "use_original": "Imatge original en color",
+          "use_grayscale_enhancements": "Escala de grisos i millores (contrast automàtic, igualació, Otsu)",
+          "use_scaled": "Variants escalades (lentes)",
+          "qr_only": "Ignora els codis de barres"
+        },
+        "data_description": {
+          "entity_id": "Càmera que proporciona fotogrames fixes per a la descodificació.",
+          "name": "Si està buit, el nom de l'entitat es genera automàticament (p. ex., la calçada QR).",
+          "scan_interval": "Segons entre instantànies automàtiques. Utilitzeu 0 per no escanejar automàticament; activar image_processing.scan manualment quan sigui necessari.",
+          "use_original": "Intenteu llegir primer un codi QR del marc, sense preprocessar.",
+          "use_grayscale_enhancements": "Proveu millores bàsiques de la imatge abans d'escanejar (contrast automàtic, equalització d'histograma, llindar d'Otsu).",
+          "use_scaled": "Proveu diverses versions reescalades; CPU pesada. Només per a imatges molt pobres en maquinari capaç.",
+          "qr_only": "Quan està activat, només es descodifiquen els codis QR; es salten altres tipus de codis de barres."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Activeu almenys un grup de preprocessament (imatge original, millores en escala de grisos o escala)."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Opcions del lector de codis QR",
+        "description": "Ajustar el comportament d'escaneig. Habiliteu almenys una ruta de preprocessament.",
+        "data": {
+          "scan_interval": "Interval d'exploració automàtica",
+          "use_original": "Imatge original en color",
+          "use_grayscale_enhancements": "Escala de grisos i millores (contrast automàtic, igualació, Otsu)",
+          "use_scaled": "Variants escalades (lentes)",
+          "qr_only": "Ignora els codis de barres"
+        },
+        "data_description": {
+          "scan_interval": "Segons entre instantànies automàtiques. Utilitzeu 0 per no escanejar automàticament; activar image_processing.scan manualment quan sigui necessari.",
+          "use_original": "Intenteu llegir primer un codi QR del marc, sense preprocessar.",
+          "use_grayscale_enhancements": "Proveu millores bàsiques de la imatge abans d'escanejar (contrast automàtic, equalització d'histograma, llindar d'Otsu).",
+          "use_scaled": "Proveu diverses versions reescalades; CPU pesada. Només per a imatges molt pobres en maquinari capaç.",
+          "qr_only": "Quan està activat, només es descodifiquen els codis QR; es salten altres tipus de codis de barres."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Activeu almenys un grup de preprocessament (imatge original, millores en escala de grisos o escala)."
+    }
+  }
+}

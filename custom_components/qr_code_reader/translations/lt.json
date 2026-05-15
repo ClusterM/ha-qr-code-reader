@@ -1,0 +1,56 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "QR kodo skaitytuvas",
+        "description": "Pasirinkite fotoaparatą ir nuskaitymo dažnumą. Įgalinkite bent vieną išankstinio apdorojimo kelią.",
+        "data": {
+          "entity_id": "Fotoaparatas",
+          "name": "Vardas (neprivaloma)",
+          "scan_interval": "Automatinis nuskaitymo intervalas",
+          "use_original": "Originalus spalvotas vaizdas",
+          "use_grayscale_enhancements": "Pilkos spalvos ir patobulinimai (automatinis kontrastas, išlyginimas, Otsu)",
+          "use_scaled": "Pakeisti variantai (lėtas)",
+          "qr_only": "Ignoruoti brūkšninius kodus"
+        },
+        "data_description": {
+          "entity_id": "Fotoaparatas, kuriame yra nejudančių kadrų dekodavimui.",
+          "name": "Jei tuščia, objekto pavadinimas generuojamas automatiškai (pvz., QR važiuojamoji dalis).",
+          "scan_interval": "Sekundės tarp automatinių momentinių nuotraukų. Naudokite 0, kad nebūtų automatinio nuskaitymo; suaktyvinkite image_processing.scan rankiniu būdu, kai reikia.",
+          "use_original": "Pirmiausia pabandykite nuskaityti QR kodą iš rėmelio be išankstinio apdorojimo.",
+          "use_grayscale_enhancements": "Prieš nuskaitydami išbandykite pagrindinius vaizdo patobulinimus (automatinis kontrastas, histogramos išlyginimas, Otsu slenkstis).",
+          "use_scaled": "Išbandykite kelias pakeistas versijas; Sunkus CPU. Tik labai prastiems vaizdams, turintiems tinkamos aparatinės įrangos.",
+          "qr_only": "Kai įjungta, iššifruojami tik QR kodai; kiti brūkšninių kodų tipai praleidžiami."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Įgalinkite bent vieną išankstinio apdorojimo grupę (originalus vaizdas, pilkos spalvos patobulinimai arba mastelis)."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "QR kodo skaitytuvo parinktys",
+        "description": "Sureguliuokite nuskaitymo elgesį. Įgalinkite bent vieną išankstinio apdorojimo kelią.",
+        "data": {
+          "scan_interval": "Automatinis nuskaitymo intervalas",
+          "use_original": "Originalus spalvotas vaizdas",
+          "use_grayscale_enhancements": "Pilkos spalvos ir patobulinimai (automatinis kontrastas, išlyginimas, Otsu)",
+          "use_scaled": "Pakeisti variantai (lėtas)",
+          "qr_only": "Ignoruoti brūkšninius kodus"
+        },
+        "data_description": {
+          "scan_interval": "Sekundės tarp automatinių momentinių nuotraukų. Naudokite 0, kad nebūtų automatinio nuskaitymo; suaktyvinkite image_processing.scan rankiniu būdu, kai reikia.",
+          "use_original": "Pirmiausia pabandykite nuskaityti QR kodą iš rėmelio be išankstinio apdorojimo.",
+          "use_grayscale_enhancements": "Prieš nuskaitydami išbandykite pagrindinius vaizdo patobulinimus (automatinis kontrastas, histogramos išlyginimas, Otsu slenkstis).",
+          "use_scaled": "Išbandykite kelias pakeistas versijas; Sunkus CPU. Tik labai prastiems vaizdams, turintiems tinkamos aparatinės įrangos.",
+          "qr_only": "Kai įjungta, iššifruojami tik QR kodai; kiti brūkšninių kodų tipai praleidžiami."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Įgalinkite bent vieną išankstinio apdorojimo grupę (originalus vaizdas, pilkos spalvos patobulinimai arba mastelis)."
+    }
+  }
+}

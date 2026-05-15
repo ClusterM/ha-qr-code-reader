@@ -1,0 +1,56 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "二维码阅读器",
+        "description": "选择相机和扫描频率。启用至少一个预处理路径。",
+        "data": {
+          "entity_id": "相机",
+          "name": "姓名（可选）",
+          "scan_interval": "自动扫描间隔",
+          "use_original": "原始彩色图像",
+          "use_grayscale_enhancements": "灰度和增强（自动对比度、均衡、Otsu）",
+          "use_scaled": "缩放变体（慢）",
+          "qr_only": "忽略条形码"
+        },
+        "data_description": {
+          "entity_id": "提供静态帧进行解码的相机。",
+          "name": "如果为空，则自动生成实体名称（例如 QR 车道）。",
+          "scan_interval": "自动快照之间的秒数。使用 0 表示不自动扫描；需要时手动触发 image_processing.scan 。",
+          "use_original": "尝试先从框架中读取二维码，而不进行预处理。",
+          "use_grayscale_enhancements": "在扫描之前尝试基本的图像改进（自动对比度、直方图均衡、Otsu 阈值）。",
+          "use_scaled": "尝试多个重新缩放的版本； CPU 重。仅适用于功能强大的硬件上非常差的图像。",
+          "qr_only": "启用后，仅解码 QR 码；其他条形码类型将被跳过。"
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "启用至少一组预处理（原始图像、灰度增强或缩放）。"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "QR 码阅读器选项",
+        "description": "调整扫描行为。启用至少一个预处理路径。",
+        "data": {
+          "scan_interval": "自动扫描间隔",
+          "use_original": "原始彩色图像",
+          "use_grayscale_enhancements": "灰度和增强（自动对比度、均衡、Otsu）",
+          "use_scaled": "缩放变体（慢）",
+          "qr_only": "忽略条形码"
+        },
+        "data_description": {
+          "scan_interval": "自动快照之间的秒数。使用 0 表示不自动扫描；需要时手动触发 image_processing.scan 。",
+          "use_original": "尝试先从框架中读取二维码，而不进行预处理。",
+          "use_grayscale_enhancements": "在扫描之前尝试基本的图像改进（自动对比度、直方图均衡、Otsu 阈值）。",
+          "use_scaled": "尝试多个重新缩放的版本； CPU 重。仅适用于功能强大的硬件上非常差的图像。",
+          "qr_only": "启用后，仅解码 QR 码；其他条形码类型将被跳过。"
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "启用至少一组预处理（原始图像、灰度增强或缩放）。"
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "QR-kode leser",
+        "description": "Kies die kamera en hoe gereeld om te skandeer. Aktiveer ten minste een voorverwerkingspad.",
+        "data": {
+          "entity_id": "Kamera",
+          "name": "Naam (opsioneel)",
+          "scan_interval": "Outomatiese skanderingsinterval",
+          "use_original": "Oorspronklike kleurbeeld",
+          "use_grayscale_enhancements": "Grysskaal en verbeterings (outokontras, gelykmaak, Otsu)",
+          "use_scaled": "Geskaalde variante (stadig)",
+          "qr_only": "Ignoreer strepieskodes"
+        },
+        "data_description": {
+          "entity_id": "Kamera wat stilstaande rame vir dekodering verskaf.",
+          "name": "As dit leeg is, word die entiteit se naam outomaties gegenereer (bv. QR-oprit).",
+          "scan_interval": "Sekondes tussen outomatiese foto's. Gebruik 0 vir geen outomatiese skanderings nie; trigger image_processing.scan handmatig wanneer nodig.",
+          "use_original": "Probeer eers 'n QR-kode uit die raam lees, sonder om vooraf te verwerk.",
+          "use_grayscale_enhancements": "Probeer basiese beeldverbeterings voor skandering (outokontras, histogramgelykstelling, Otsu-drempel).",
+          "use_scaled": "Probeer verskeie herskaalde weergawes; SVE-swaar. Slegs vir baie swak beelde op bekwame hardeware.",
+          "qr_only": "Wanneer dit geaktiveer is, word slegs QR-kodes gedekodeer; ander strepieskodetipes word oorgeslaan."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Aktiveer ten minste een voorverwerkingsgroep (oorspronklike prent, grysskaalverbeterings of geskaal)."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "QR Code Reader opsies",
+        "description": "Pas skanderinggedrag aan. Aktiveer ten minste een voorverwerkingspad.",
+        "data": {
+          "scan_interval": "Outomatiese skanderingsinterval",
+          "use_original": "Oorspronklike kleurbeeld",
+          "use_grayscale_enhancements": "Grysskaal en verbeterings (outokontras, gelykmaak, Otsu)",
+          "use_scaled": "Geskaalde variante (stadig)",
+          "qr_only": "Ignoreer strepieskodes"
+        },
+        "data_description": {
+          "scan_interval": "Sekondes tussen outomatiese foto's. Gebruik 0 vir geen outomatiese skanderings nie; trigger image_processing.scan handmatig wanneer nodig.",
+          "use_original": "Probeer eers 'n QR-kode uit die raam lees, sonder om vooraf te verwerk.",
+          "use_grayscale_enhancements": "Probeer basiese beeldverbeterings voor skandering (outokontras, histogramgelykstelling, Otsu-drempel).",
+          "use_scaled": "Probeer verskeie herskaalde weergawes; SVE-swaar. Slegs vir baie swak beelde op bekwame hardeware.",
+          "qr_only": "Wanneer dit geaktiveer is, word slegs QR-kodes gedekodeer; ander strepieskodetipes word oorgeslaan."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Aktiveer ten minste een voorverwerkingsgroep (oorspronklike prent, grysskaalverbeterings of geskaal)."
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "QR-Code-Leser",
+        "description": "Wählen Sie die Kamera und die Häufigkeit des Scans aus. Aktivieren Sie mindestens einen Vorverarbeitungspfad.",
+        "data": {
+          "entity_id": "Kamera",
+          "name": "Name (optional)",
+          "scan_interval": "Automatisches Scanintervall",
+          "use_original": "Originales Farbbild",
+          "use_grayscale_enhancements": "Graustufen und Verbesserungen (Autokontrast, Ausgleich, Otsu)",
+          "use_scaled": "Skalierte Varianten (langsam)",
+          "qr_only": "Barcodes ignorieren"
+        },
+        "data_description": {
+          "entity_id": "Kamera, die Standbilder zum Dekodieren bereitstellt.",
+          "name": "Wenn leer, wird der Entitätsname automatisch generiert (z. B. QR-Einfahrt).",
+          "scan_interval": "Sekunden zwischen automatischen Schnappschüssen. Verwenden Sie 0 für keine automatischen Scans; Lösen Sie image_processing.scan bei Bedarf manuell aus.",
+          "use_original": "Versuchen Sie zunächst, ohne Vorverarbeitung einen QR-Code aus dem Rahmen zu lesen.",
+          "use_grayscale_enhancements": "Probieren Sie vor dem Scannen grundlegende Bildverbesserungen aus (Autokontrast, Histogrammausgleich, Otsu-Schwellenwert).",
+          "use_scaled": "Probieren Sie mehrere neu skalierte Versionen aus; CPU-lastig. Nur für sehr schlechte Bilder auf leistungsfähiger Hardware.",
+          "qr_only": "Wenn aktiviert, werden nur QR-Codes dekodiert; Andere Barcodetypen werden übersprungen."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Aktivieren Sie mindestens eine Vorverarbeitungsgruppe (Originalbild, Graustufenverbesserungen oder skaliert)."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Optionen für den QR-Code-Reader",
+        "description": "Passen Sie das Scanverhalten an. Aktivieren Sie mindestens einen Vorverarbeitungspfad.",
+        "data": {
+          "scan_interval": "Automatisches Scanintervall",
+          "use_original": "Originales Farbbild",
+          "use_grayscale_enhancements": "Graustufen und Verbesserungen (Autokontrast, Ausgleich, Otsu)",
+          "use_scaled": "Skalierte Varianten (langsam)",
+          "qr_only": "Barcodes ignorieren"
+        },
+        "data_description": {
+          "scan_interval": "Sekunden zwischen automatischen Schnappschüssen. Verwenden Sie 0 für keine automatischen Scans; Lösen Sie image_processing.scan bei Bedarf manuell aus.",
+          "use_original": "Versuchen Sie zunächst, ohne Vorverarbeitung einen QR-Code aus dem Rahmen zu lesen.",
+          "use_grayscale_enhancements": "Probieren Sie vor dem Scannen grundlegende Bildverbesserungen aus (Autokontrast, Histogrammausgleich, Otsu-Schwellenwert).",
+          "use_scaled": "Probieren Sie mehrere neu skalierte Versionen aus; CPU-lastig. Nur für sehr schlechte Bilder auf leistungsfähiger Hardware.",
+          "qr_only": "Wenn aktiviert, werden nur QR-Codes dekodiert; Andere Barcodetypen werden übersprungen."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Aktivieren Sie mindestens eine Vorverarbeitungsgruppe (Originalbild, Graustufenverbesserungen oder skaliert)."
+    }
+  }
+}

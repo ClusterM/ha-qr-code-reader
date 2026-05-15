@@ -1,0 +1,56 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "QR-kodläsare",
+        "description": "Välj kamera och hur ofta du vill skanna. Aktivera minst en förbearbetningsväg.",
+        "data": {
+          "entity_id": "Kamera",
+          "name": "Namn (valfritt)",
+          "scan_interval": "Automatiskt skanningsintervall",
+          "use_original": "Original färgbild",
+          "use_grayscale_enhancements": "Gråskala och förbättringar (autokontrast, utjämning, Otsu)",
+          "use_scaled": "Skalade varianter (långsamma)",
+          "qr_only": "Ignorera streckkoder"
+        },
+        "data_description": {
+          "entity_id": "Kamera som tillhandahåller stillbilder för avkodning.",
+          "name": "Om det är tomt genereras enhetsnamnet automatiskt (t.ex. QR-uppfart).",
+          "scan_interval": "Sekunder mellan automatiska ögonblicksbilder. Använd 0 för inga automatiska skanningar; trigga image_processing.scan manuellt vid behov.",
+          "use_original": "Försök att läsa en QR-kod från ramen först, utan förbearbetning.",
+          "use_grayscale_enhancements": "Prova grundläggande bildförbättringar före skanning (autokontrast, histogramutjämning, Otsu-tröskel).",
+          "use_scaled": "Prova flera omskalade versioner; CPU-tung. Endast för mycket dåliga bilder på kapabel hårdvara.",
+          "qr_only": "När det är aktiverat avkodas endast QR-koder; andra streckkodstyper hoppas över."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Aktivera minst en förbearbetningsgrupp (originalbild, gråskaleförbättringar eller skalad)."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Alternativ för QR-kodläsare",
+        "description": "Justera skanningsbeteende. Aktivera minst en förbearbetningsväg.",
+        "data": {
+          "scan_interval": "Automatiskt skanningsintervall",
+          "use_original": "Original färgbild",
+          "use_grayscale_enhancements": "Gråskala och förbättringar (autokontrast, utjämning, Otsu)",
+          "use_scaled": "Skalade varianter (långsamma)",
+          "qr_only": "Ignorera streckkoder"
+        },
+        "data_description": {
+          "scan_interval": "Sekunder mellan automatiska ögonblicksbilder. Använd 0 för inga automatiska skanningar; trigga image_processing.scan manuellt vid behov.",
+          "use_original": "Försök att läsa en QR-kod från ramen först, utan förbearbetning.",
+          "use_grayscale_enhancements": "Prova grundläggande bildförbättringar före skanning (autokontrast, histogramutjämning, Otsu-tröskel).",
+          "use_scaled": "Prova flera omskalade versioner; CPU-tung. Endast för mycket dåliga bilder på kapabel hårdvara.",
+          "qr_only": "När det är aktiverat avkodas endast QR-koder; andra streckkodstyper hoppas över."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Aktivera minst en förbearbetningsgrupp (originalbild, gråskaleförbättringar eller skalad)."
+    }
+  }
+}

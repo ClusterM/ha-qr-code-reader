@@ -1,0 +1,56 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "QR-koodi lugeja",
+        "description": "Valige kaamera ja skannimise sagedus. Lubage vähemalt üks eeltöötlustee.",
+        "data": {
+          "entity_id": "Kaamera",
+          "name": "Nimi (valikuline)",
+          "scan_interval": "Automaatne skannimise intervall",
+          "use_original": "Originaalne värviline pilt",
+          "use_grayscale_enhancements": "Halltoonid ja täiustused (autokontrast, võrdsustamine, Otsu)",
+          "use_scaled": "Skaleeritud variandid (aeglane)",
+          "qr_only": "Ignoreeri vöötkoode"
+        },
+        "data_description": {
+          "entity_id": "Kaamera, mis pakub dekodeerimiseks kaadreid.",
+          "name": "Kui see on tühi, genereeritakse olemi nimi automaatselt (nt QR sõidutee).",
+          "scan_interval": "Sekundid automaatsete hetktõmmiste vahel. Automaatse skannimise puudumisel kasutage 0; käivitage vajadusel image_processing.scan käsitsi.",
+          "use_original": "Proovige esmalt lugeda raamist QR-koodi ilma eeltöötluseta.",
+          "use_grayscale_enhancements": "Proovige enne skannimist pildi põhiparandusi (autokontrast, histogrammi võrdsustamine, Otsu lävi).",
+          "use_scaled": "Proovige mitut skaleeritud versiooni; Protsessori koormus. Ainult väga kehvade piltide jaoks võimeka riistvaraga.",
+          "qr_only": "Kui see on lubatud, dekodeeritakse ainult QR-koode; muud tüüpi vöötkoodid jäetakse vahele."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Lubage vähemalt üks eeltöötlusrühm (algne pilt, halltoonide täiustused või skaleeritud)."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "QR-koodi lugeja valikud",
+        "description": "Reguleerige skannimiskäitumist. Lubage vähemalt üks eeltöötlustee.",
+        "data": {
+          "scan_interval": "Automaatne skannimise intervall",
+          "use_original": "Originaalne värviline pilt",
+          "use_grayscale_enhancements": "Halltoonid ja täiustused (autokontrast, võrdsustamine, Otsu)",
+          "use_scaled": "Skaleeritud variandid (aeglane)",
+          "qr_only": "Ignoreeri vöötkoode"
+        },
+        "data_description": {
+          "scan_interval": "Sekundid automaatsete hetktõmmiste vahel. Automaatse skannimise puudumisel kasutage 0; käivitage vajadusel image_processing.scan käsitsi.",
+          "use_original": "Proovige esmalt lugeda raamist QR-koodi ilma eeltöötluseta.",
+          "use_grayscale_enhancements": "Proovige enne skannimist pildi põhiparandusi (autokontrast, histogrammi võrdsustamine, Otsu lävi).",
+          "use_scaled": "Proovige mitut skaleeritud versiooni; Protsessori koormus. Ainult väga kehvade piltide jaoks võimeka riistvaraga.",
+          "qr_only": "Kui see on lubatud, dekodeeritakse ainult QR-koode; muud tüüpi vöötkoodid jäetakse vahele."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Lubage vähemalt üks eeltöötlusrühm (algne pilt, halltoonide täiustused või skaleeritud)."
+    }
+  }
+}

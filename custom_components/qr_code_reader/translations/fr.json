@@ -1,0 +1,56 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Lecteur de codes QR",
+        "description": "Choisissez l'appareil photo et la fréquence de numérisation. Activez au moins un chemin de prétraitement.",
+        "data": {
+          "entity_id": "Caméra",
+          "name": "Nom (facultatif)",
+          "scan_interval": "Intervalle d'analyse automatique",
+          "use_original": "Image couleur originale",
+          "use_grayscale_enhancements": "Niveaux de gris et améliorations (contraste automatique, égalisation, Otsu)",
+          "use_scaled": "Variantes mises à l'échelle (lentes)",
+          "qr_only": "Ignorer les codes-barres"
+        },
+        "data_description": {
+          "entity_id": "Caméra qui fournit des images fixes pour le décodage.",
+          "name": "S'il est vide, le nom de l'entité est généré automatiquement (par exemple, allée QR).",
+          "scan_interval": "Secondes entre les instantanés automatiques. Utilisez 0 pour aucune analyse automatique ; déclenchez image_processing.scan manuellement en cas de besoin.",
+          "use_original": "Essayez d'abord de lire un code QR à partir du cadre, sans prétraitement.",
+          "use_grayscale_enhancements": "Essayez des améliorations de base de l'image avant la numérisation (contraste automatique, égalisation de l'histogramme, seuil Otsu).",
+          "use_scaled": "Essayez plusieurs versions redimensionnées ; Lourd en CPU. Uniquement pour les images de très mauvaise qualité sur du matériel compatible.",
+          "qr_only": "Lorsqu'il est activé, seuls les codes QR sont décodés ; les autres types de codes-barres sont ignorés."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Activez au moins un groupe de prétraitement (image originale, améliorations en niveaux de gris ou mise à l'échelle)."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Options du lecteur de code QR",
+        "description": "Ajustez le comportement de numérisation. Activez au moins un chemin de prétraitement.",
+        "data": {
+          "scan_interval": "Intervalle d'analyse automatique",
+          "use_original": "Image couleur originale",
+          "use_grayscale_enhancements": "Niveaux de gris et améliorations (contraste automatique, égalisation, Otsu)",
+          "use_scaled": "Variantes mises à l'échelle (lentes)",
+          "qr_only": "Ignorer les codes-barres"
+        },
+        "data_description": {
+          "scan_interval": "Secondes entre les instantanés automatiques. Utilisez 0 pour aucune analyse automatique ; déclenchez image_processing.scan manuellement en cas de besoin.",
+          "use_original": "Essayez d'abord de lire un code QR à partir du cadre, sans prétraitement.",
+          "use_grayscale_enhancements": "Essayez des améliorations de base de l'image avant la numérisation (contraste automatique, égalisation de l'histogramme, seuil Otsu).",
+          "use_scaled": "Essayez plusieurs versions redimensionnées ; Lourd en CPU. Uniquement pour les images de très mauvaise qualité sur du matériel compatible.",
+          "qr_only": "Lorsqu'il est activé, seuls les codes QR sont décodés ; les autres types de codes-barres sont ignorés."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Activez au moins un groupe de prétraitement (image originale, améliorations en niveaux de gris ou mise à l'échelle)."
+    }
+  }
+}

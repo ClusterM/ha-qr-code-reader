@@ -1,0 +1,14 @@
+{
+  "domain": "qr_code_reader",
+  "name": "QR Code and Barcode Reader",
+  "codeowners": ["@ClusterM"],
+  "config_flow": true,
+  "dependencies": ["camera", "image_processing"],
+  "documentation": "https://github.com/ClusterM/ha-qr-code-reader",
+  "integration_type": "device",
+  "iot_class": "calculated",
+  "issue_tracker": "https://github.com/ClusterM/ha-qr-code-reader/issues",
+  "loggers": ["pyzbar"],
+  "requirements": ["Pillow>=12.2.0", "pyzbar>=0.1.9"],
+  "version": "1.0.0"
+}

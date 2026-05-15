@@ -1,0 +1,56 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "QR Kodeen irakurgailua",
+        "description": "Aukeratu kamera eta zenbat aldiz eskaneatu. Gaitu gutxienez aurreprozesatzeko bide bat.",
+        "data": {
+          "entity_id": "Kamera",
+          "name": "Izena (aukerakoa)",
+          "scan_interval": "Eskaneatzeko tarte automatikoa",
+          "use_original": "Jatorrizko koloreko irudia",
+          "use_grayscale_enhancements": "Grisen eskala eta hobekuntzak (kontrastea automatikoa, berdintzea, Otsu)",
+          "use_scaled": "Aldaera eskalatuak (motela)",
+          "qr_only": "Ez ikusi barra kodeak"
+        },
+        "data_description": {
+          "entity_id": "Deskodetzeko fotogramak eskaintzen dituen kamera.",
+          "name": "Hutsik badago, entitatearen izena automatikoki sortzen da (adibidez, QR bidegorria).",
+          "scan_interval": "Instantanea automatikoen arteko segundoak. Erabili 0 bilaketa automatikorik ez egiteko; abiarazi image_processing.scan eskuz behar denean.",
+          "use_original": "Saiatu lehenik QR kodea irakurtzen markotik, aldez aurretik prozesatu gabe.",
+          "use_grayscale_enhancements": "Saiatu oinarrizko irudiaren hobekuntzak eskaneatu aurretik (kontraste automatikoa, histograma berdintzea, Otsu atalasea).",
+          "use_scaled": "Saiatu hainbat bertsio berritu; CPU astuna. Hardware gaiko irudi oso eskasetarako soilik.",
+          "qr_only": "Gaituta dagoenean, QR kodeak bakarrik deskodetzen dira; beste barra-kode mota batzuk saltatzen dira."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Gaitu gutxienez aurreprozesatzeko talde bat (jatorrizko irudia, gris-eskalaren hobekuntzak edo eskalatua)."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "QR Code Reader aukerak",
+        "description": "Doitu eskaneatzeko portaera. Gaitu gutxienez aurreprozesatzeko bide bat.",
+        "data": {
+          "scan_interval": "Eskaneatzeko tarte automatikoa",
+          "use_original": "Jatorrizko koloreko irudia",
+          "use_grayscale_enhancements": "Grisen eskala eta hobekuntzak (kontrastea automatikoa, berdintzea, Otsu)",
+          "use_scaled": "Aldaera eskalatuak (motela)",
+          "qr_only": "Ez ikusi barra kodeak"
+        },
+        "data_description": {
+          "scan_interval": "Instantanea automatikoen arteko segundoak. Erabili 0 bilaketa automatikorik ez egiteko; abiarazi image_processing.scan eskuz behar denean.",
+          "use_original": "Saiatu lehenik QR kodea irakurtzen markotik, aldez aurretik prozesatu gabe.",
+          "use_grayscale_enhancements": "Saiatu oinarrizko irudiaren hobekuntzak eskaneatu aurretik (kontraste automatikoa, histograma berdintzea, Otsu atalasea).",
+          "use_scaled": "Saiatu hainbat bertsio berritu; CPU astuna. Hardware gaiko irudi oso eskasetarako soilik.",
+          "qr_only": "Gaituta dagoenean, QR kodeak bakarrik deskodetzen dira; beste barra-kode mota batzuk saltatzen dira."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Gaitu gutxienez aurreprozesatzeko talde bat (jatorrizko irudia, gris-eskalaren hobekuntzak edo eskalatua)."
+    }
+  }
+}

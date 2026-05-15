@@ -1,0 +1,56 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Lector de códigos QR",
+        "description": "Escolla a cámara e con que frecuencia desexa dixitalizar. Activa polo menos unha ruta de preprocesamento.",
+        "data": {
+          "entity_id": "Cámara",
+          "name": "Nome (opcional)",
+          "scan_interval": "Intervalo de exploración automática",
+          "use_original": "Imaxe orixinal en cor",
+          "use_grayscale_enhancements": "Escala de grises e melloras (contraste automático, ecualización, Otsu)",
+          "use_scaled": "Variantes escaladas (lentas)",
+          "qr_only": "Ignorar códigos de barras"
+        },
+        "data_description": {
+          "entity_id": "Cámara que proporciona fotogramas para a decodificación.",
+          "name": "Se está baleiro, o nome da entidade xérase automaticamente (por exemplo, a calzada QR).",
+          "scan_interval": "Segundos entre instantáneas automáticas. Use 0 para non escanear automaticamente; activar image_processing.scan manualmente cando sexa necesario.",
+          "use_original": "Proba a ler primeiro un código QR do cadro sen procesar previamente.",
+          "use_grayscale_enhancements": "Proba melloras básicas da imaxe antes da dixitalización (contraste automático, ecualización do histograma, limiar de Otsu).",
+          "use_scaled": "Proba varias versións reescaladas; CPU pesada. Só para imaxes moi pobres en hardware capaz.",
+          "qr_only": "Cando está activado, só se descodifican os códigos QR; omítense outros tipos de códigos de barras."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Activa polo menos un grupo de preprocesamento (imaxe orixinal, melloras en escala de grises ou escala)."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Opcións do lector de códigos QR",
+        "description": "Axustar o comportamento de dixitalización. Activa polo menos unha ruta de preprocesamento.",
+        "data": {
+          "scan_interval": "Intervalo de exploración automática",
+          "use_original": "Imaxe orixinal en cor",
+          "use_grayscale_enhancements": "Escala de grises e melloras (contraste automático, ecualización, Otsu)",
+          "use_scaled": "Variantes escaladas (lentas)",
+          "qr_only": "Ignorar códigos de barras"
+        },
+        "data_description": {
+          "scan_interval": "Segundos entre instantáneas automáticas. Use 0 para non escanear automaticamente; activar image_processing.scan manualmente cando sexa necesario.",
+          "use_original": "Proba a ler primeiro un código QR do cadro sen procesar previamente.",
+          "use_grayscale_enhancements": "Proba melloras básicas da imaxe antes da dixitalización (contraste automático, ecualización do histograma, limiar de Otsu).",
+          "use_scaled": "Proba varias versións reescaladas; CPU pesada. Só para imaxes moi pobres en hardware capaz.",
+          "qr_only": "Cando está activado, só se descodifican os códigos QR; omítense outros tipos de códigos de barras."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Activa polo menos un grupo de preprocesamento (imaxe orixinal, melloras en escala de grises ou escala)."
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "QR koda lasītājs",
+        "description": "Izvēlieties kameru un skenēšanas biežumu. Iespējojiet vismaz vienu priekšapstrādes ceļu.",
+        "data": {
+          "entity_id": "Kamera",
+          "name": "Vārds (neobligāti)",
+          "scan_interval": "Automātiskais skenēšanas intervāls",
+          "use_original": "Oriģinālais krāsu attēls",
+          "use_grayscale_enhancements": "Pelēktoņi un uzlabojumi (automātiskais kontrasts, izlīdzināšana, Otsu)",
+          "use_scaled": "Mērogoti varianti (lēni)",
+          "qr_only": "Ignorēt svītrkodus"
+        },
+        "data_description": {
+          "entity_id": "Kamera, kas nodrošina nekustīgus kadrus dekodēšanai.",
+          "name": "If empty, the entity name is generated automatically (e.g. QR driveway).",
+          "scan_interval": "Sekundes starp automātiskajiem momentuzņēmumiem. Izmantojiet 0, lai automātiskā skenēšana netiktu veikta; aktivizējiet image_processing.scan manuāli, ja nepieciešams.",
+          "use_original": "Vispirms mēģiniet nolasīt QR kodu no rāmja bez iepriekšējas apstrādes.",
+          "use_grayscale_enhancements": "Try basic image improvements before scanning (autocontrast, histogram equalize, Otsu threshold).",
+          "use_scaled": "Izmēģiniet vairākas pārveidotas versijas; CPU smags. Tikai ļoti sliktiem attēliem ar spējīgu aparatūru.",
+          "qr_only": "Ja iespējots, tiek atšifrēti tikai QR kodi; citi svītrkodu veidi tiek izlaisti."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Iespējojiet vismaz vienu pirmapstrādes grupu (sākotnējais attēls, pelēktoņu uzlabojumi vai mērogots)."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "QR koda lasītāja iespējas",
+        "description": "Pielāgojiet skenēšanas darbību. Iespējojiet vismaz vienu priekšapstrādes ceļu.",
+        "data": {
+          "scan_interval": "Automātiskais skenēšanas intervāls",
+          "use_original": "Oriģinālais krāsu attēls",
+          "use_grayscale_enhancements": "Pelēktoņi un uzlabojumi (automātiskais kontrasts, izlīdzināšana, Otsu)",
+          "use_scaled": "Mērogoti varianti (lēni)",
+          "qr_only": "Ignorēt svītrkodus"
+        },
+        "data_description": {
+          "scan_interval": "Sekundes starp automātiskajiem momentuzņēmumiem. Izmantojiet 0, lai automātiskā skenēšana netiktu veikta; aktivizējiet image_processing.scan manuāli, ja nepieciešams.",
+          "use_original": "Vispirms mēģiniet nolasīt QR kodu no rāmja bez iepriekšējas apstrādes.",
+          "use_grayscale_enhancements": "Try basic image improvements before scanning (autocontrast, histogram equalize, Otsu threshold).",
+          "use_scaled": "Izmēģiniet vairākas pārveidotas versijas; CPU smags. Tikai ļoti sliktiem attēliem ar spējīgu aparatūru.",
+          "qr_only": "Ja iespējots, tiek atšifrēti tikai QR kodi; citi svītrkodu veidi tiek izlaisti."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Iespējojiet vismaz vienu pirmapstrādes grupu (sākotnējais attēls, pelēktoņu uzlabojumi vai mērogots)."
+    }
+  }
+}

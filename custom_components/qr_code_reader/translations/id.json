@@ -1,0 +1,56 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Pembaca Kode QR",
+        "description": "Pilih kamera dan seberapa sering memindai. Aktifkan setidaknya satu jalur prapemrosesan.",
+        "data": {
+          "entity_id": "Kamera",
+          "name": "Nama (opsional)",
+          "scan_interval": "Interval pemindaian otomatis",
+          "use_original": "Gambar berwarna asli",
+          "use_grayscale_enhancements": "Skala abu-abu dan penyempurnaannya (kontras otomatis, equalize, Otsu)",
+          "use_scaled": "Varian berskala (lambat)",
+          "qr_only": "Abaikan barcode"
+        },
+        "data_description": {
+          "entity_id": "Kamera yang menyediakan bingkai diam untuk decoding.",
+          "name": "Jika kosong, nama entitas dihasilkan secara otomatis (misalnya jalan masuk QR).",
+          "scan_interval": "Detik antara snapshot otomatis. Gunakan 0 jika tidak ada pemindaian otomatis; memicu image_processing.scan secara manual bila diperlukan.",
+          "use_original": "Coba baca kode QR dari frame terlebih dahulu, tanpa pemrosesan awal.",
+          "use_grayscale_enhancements": "Coba perbaikan gambar dasar sebelum memindai (kontras otomatis, penyetaraan histogram, ambang batas Otsu).",
+          "use_scaled": "Coba beberapa versi yang diubah skalanya; Berat CPU. Hanya untuk gambar yang sangat buruk pada perangkat keras yang mumpuni.",
+          "qr_only": "Saat diaktifkan, hanya kode QR yang diterjemahkan; jenis kode batang lainnya dilewati."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Aktifkan setidaknya satu grup prapemrosesan (gambar asli, penyempurnaan skala abu-abu, atau diskalakan)."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Opsi Pembaca Kode QR",
+        "description": "Sesuaikan perilaku pemindaian. Aktifkan setidaknya satu jalur prapemrosesan.",
+        "data": {
+          "scan_interval": "Interval pemindaian otomatis",
+          "use_original": "Gambar berwarna asli",
+          "use_grayscale_enhancements": "Skala abu-abu dan penyempurnaannya (kontras otomatis, equalize, Otsu)",
+          "use_scaled": "Varian berskala (lambat)",
+          "qr_only": "Abaikan barcode"
+        },
+        "data_description": {
+          "scan_interval": "Detik antara snapshot otomatis. Gunakan 0 jika tidak ada pemindaian otomatis; memicu image_processing.scan secara manual bila diperlukan.",
+          "use_original": "Coba baca kode QR dari frame terlebih dahulu, tanpa pemrosesan awal.",
+          "use_grayscale_enhancements": "Coba perbaikan gambar dasar sebelum memindai (kontras otomatis, penyetaraan histogram, ambang batas Otsu).",
+          "use_scaled": "Coba beberapa versi yang diubah skalanya; Berat CPU. Hanya untuk gambar yang sangat buruk pada perangkat keras yang mumpuni.",
+          "qr_only": "Saat diaktifkan, hanya kode QR yang diterjemahkan; jenis kode batang lainnya dilewati."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Aktifkan setidaknya satu grup prapemrosesan (gambar asli, penyempurnaan skala abu-abu, atau diskalakan)."
+    }
+  }
+}

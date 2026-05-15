@@ -1,0 +1,56 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "QR kóða lesandi",
+        "description": "Veldu myndavélina og hversu oft á að skanna. Virkja að minnsta kosti eina forvinnsluslóð.",
+        "data": {
+          "entity_id": "Myndavél",
+          "name": "Nafn (valfrjálst)",
+          "scan_interval": "Sjálfvirkt skannabil",
+          "use_original": "Upprunaleg litmynd",
+          "use_grayscale_enhancements": "Grátónar og aukahlutir (sjálfvirk birtuskil, jöfnun, Otsu)",
+          "use_scaled": "Skalað afbrigði (hægt)",
+          "qr_only": "Hunsa strikamerki"
+        },
+        "data_description": {
+          "entity_id": "Myndavél sem gefur kyrrmyndir til afkóðun.",
+          "name": "Ef það er tómt myndast nafn einingar sjálfkrafa (t.d. QR heimreið).",
+          "scan_interval": "Sekúndur á milli sjálfvirkra myndatöku. Notaðu 0 fyrir engar sjálfvirkar skannar; kveikja á image_processing.scan handvirkt þegar þörf krefur.",
+          "use_original": "Try reading a QR code from the frame first, without preprocessing.",
+          "use_grayscale_enhancements": "Prófaðu helstu endurbætur á myndinni fyrir skönnun (sjálfvirk birtuskil, jöfnun súlurits, Otsu þröskuldur).",
+          "use_scaled": "Prófaðu margar endurskalaðar útgáfur; CPU-þungur. Aðeins fyrir mjög lélegar myndir á hæfum vélbúnaði.",
+          "qr_only": "Þegar það er virkt eru aðeins QR kóðar afkóðaðir; öðrum tegundum strikamerkis er sleppt."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Virkjaðu að minnsta kosti einn forvinnsluhóp (upprunaleg mynd, grátónaaukning eða kvörðuð)."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Valkostir fyrir QR kóða lesanda",
+        "description": "Stilltu skönnunarhegðun. Virkja að minnsta kosti eina forvinnsluslóð.",
+        "data": {
+          "scan_interval": "Sjálfvirkt skannabil",
+          "use_original": "Upprunaleg litmynd",
+          "use_grayscale_enhancements": "Grátónar og aukahlutir (sjálfvirk birtuskil, jöfnun, Otsu)",
+          "use_scaled": "Skalað afbrigði (hægt)",
+          "qr_only": "Hunsa strikamerki"
+        },
+        "data_description": {
+          "scan_interval": "Sekúndur á milli sjálfvirkra myndatöku. Notaðu 0 fyrir engar sjálfvirkar skannar; kveikja á image_processing.scan handvirkt þegar þörf krefur.",
+          "use_original": "Try reading a QR code from the frame first, without preprocessing.",
+          "use_grayscale_enhancements": "Prófaðu helstu endurbætur á myndinni fyrir skönnun (sjálfvirk birtuskil, jöfnun súlurits, Otsu þröskuldur).",
+          "use_scaled": "Prófaðu margar endurskalaðar útgáfur; CPU-þungur. Aðeins fyrir mjög lélegar myndir á hæfum vélbúnaði.",
+          "qr_only": "Þegar það er virkt eru aðeins QR kóðar afkóðaðir; öðrum tegundum strikamerkis er sleppt."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Virkjaðu að minnsta kosti einn forvinnsluhóp (upprunaleg mynd, grátónaaukning eða kvörðuð)."
+    }
+  }
+}

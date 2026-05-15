@@ -1,0 +1,56 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Czytnik kodów QR",
+        "description": "Wybierz aparat i częstotliwość skanowania. Włącz co najmniej jedną ścieżkę przetwarzania wstępnego.",
+        "data": {
+          "entity_id": "Kamera",
+          "name": "Imię (opcjonalnie)",
+          "scan_interval": "Automatyczny interwał skanowania",
+          "use_original": "Oryginalny kolorowy obraz",
+          "use_grayscale_enhancements": "Skala szarości i ulepszenia (autokontrast, korekcja, Otsu)",
+          "use_scaled": "Warianty skalowane (wolne)",
+          "qr_only": "Ignoruj ​​kody kreskowe"
+        },
+        "data_description": {
+          "entity_id": "Kamera udostępniająca nieruchome klatki do dekodowania.",
+          "name": "Jeśli jest pusty, nazwa podmiotu jest generowana automatycznie (np. podjazd QR).",
+          "scan_interval": "Sekundy między automatycznymi migawkami. Użyj 0, aby nie skanować automatycznie; w razie potrzeby uruchom ręcznie image_processing.scan.",
+          "use_original": "Spróbuj najpierw odczytać kod QR z ramki, bez wstępnego przetwarzania.",
+          "use_grayscale_enhancements": "Wypróbuj podstawowe ulepszenia obrazu przed skanowaniem (autokontrast, wyrównanie histogramu, próg Otsu).",
+          "use_scaled": "Wypróbuj wiele przeskalowanych wersji; Obciążający procesor. Tylko w przypadku bardzo słabych obrazów na odpowiednim sprzęcie.",
+          "qr_only": "Po włączeniu dekodowane są tylko kody QR; inne typy kodów kreskowych są pomijane."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Włącz co najmniej jedną grupę przetwarzania wstępnego (obraz oryginalny, uwydatnienie skali szarości lub skalowanie)."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Opcje czytnika kodów QR",
+        "description": "Dostosuj zachowanie skanowania. Włącz co najmniej jedną ścieżkę przetwarzania wstępnego.",
+        "data": {
+          "scan_interval": "Automatyczny interwał skanowania",
+          "use_original": "Oryginalny kolorowy obraz",
+          "use_grayscale_enhancements": "Skala szarości i ulepszenia (autokontrast, korekcja, Otsu)",
+          "use_scaled": "Warianty skalowane (wolne)",
+          "qr_only": "Ignoruj ​​kody kreskowe"
+        },
+        "data_description": {
+          "scan_interval": "Sekundy między automatycznymi migawkami. Użyj 0, aby nie skanować automatycznie; w razie potrzeby uruchom ręcznie image_processing.scan.",
+          "use_original": "Spróbuj najpierw odczytać kod QR z ramki, bez wstępnego przetwarzania.",
+          "use_grayscale_enhancements": "Wypróbuj podstawowe ulepszenia obrazu przed skanowaniem (autokontrast, wyrównanie histogramu, próg Otsu).",
+          "use_scaled": "Wypróbuj wiele przeskalowanych wersji; Obciążający procesor. Tylko w przypadku bardzo słabych obrazów na odpowiednim sprzęcie.",
+          "qr_only": "Po włączeniu dekodowane są tylko kody QR; inne typy kodów kreskowych są pomijane."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Włącz co najmniej jedną grupę przetwarzania wstępnego (obraz oryginalny, uwydatnienie skali szarości lub skalowanie)."
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Darllenydd Cod QR",
+        "description": "Dewiswch y camera a pha mor aml i sganio. Galluogi o leiaf un llwybr rhagbrosesu.",
+        "data": {
+          "entity_id": "Camera",
+          "name": "Enw (dewisol)",
+          "scan_interval": "Cyfnod sgan awtomatig",
+          "use_original": "Delwedd lliw gwreiddiol",
+          "use_grayscale_enhancements": "Graddlwyd a gwelliannau (awtogyferbyniad, cyfartalu, Otsu)",
+          "use_scaled": "Amrywiadau graddedig (araf)",
+          "qr_only": "Anwybyddu codau bar"
+        },
+        "data_description": {
+          "entity_id": "Camera sy'n darparu fframiau llonydd ar gyfer datgodio.",
+          "name": "Os yw'n wag, caiff enw'r endid ei gynhyrchu'n awtomatig (e.e. dreif QR).",
+          "scan_interval": "Eiliadau rhwng cipluniau awtomatig. Defnyddiwch 0 ar gyfer dim sganiau awtomatig; sbarduno image_processing.scan â llaw pan fo angen.",
+          "use_original": "Ceisiwch ddarllen cod QR o'r ffrâm yn gyntaf, heb ragbrosesu.",
+          "use_grayscale_enhancements": "Rhowch gynnig ar welliannau delwedd sylfaenol cyn sganio (awtogyferbyniad, histogram cyfartalu, trothwy Otsu).",
+          "use_scaled": "Rhowch gynnig ar fersiynau wedi'u hailraddio lluosog; CPU-trwm. Dim ond ar gyfer delweddau gwael iawn ar galedwedd galluog.",
+          "qr_only": "Pan gaiff ei alluogi, dim ond codau QR sy'n cael eu dadgodio; mae mathau eraill o god bar yn cael eu hanwybyddu."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Galluogi o leiaf un grŵp rhagbrosesu (delwedd wreiddiol, gwelliannau graddlwyd, neu raddfa)."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Opsiynau Darllenydd Cod QR",
+        "description": "Addasu ymddygiad sganio. Galluogi o leiaf un llwybr rhagbrosesu.",
+        "data": {
+          "scan_interval": "Cyfnod sgan awtomatig",
+          "use_original": "Delwedd lliw gwreiddiol",
+          "use_grayscale_enhancements": "Graddlwyd a gwelliannau (awtogyferbyniad, cyfartalu, Otsu)",
+          "use_scaled": "Amrywiadau graddedig (araf)",
+          "qr_only": "Anwybyddu codau bar"
+        },
+        "data_description": {
+          "scan_interval": "Eiliadau rhwng cipluniau awtomatig. Defnyddiwch 0 ar gyfer dim sganiau awtomatig; sbarduno image_processing.scan â llaw pan fo angen.",
+          "use_original": "Ceisiwch ddarllen cod QR o'r ffrâm yn gyntaf, heb ragbrosesu.",
+          "use_grayscale_enhancements": "Rhowch gynnig ar welliannau delwedd sylfaenol cyn sganio (awtogyferbyniad, histogram cyfartalu, trothwy Otsu).",
+          "use_scaled": "Rhowch gynnig ar fersiynau wedi'u hailraddio lluosog; CPU-trwm. Dim ond ar gyfer delweddau gwael iawn ar galedwedd galluog.",
+          "qr_only": "Pan gaiff ei alluogi, dim ond codau QR sy'n cael eu dadgodio; mae mathau eraill o god bar yn cael eu hanwybyddu."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Galluogi o leiaf un grŵp rhagbrosesu (delwedd wreiddiol, gwelliannau graddlwyd, neu raddfa)."
+    }
+  }
+}

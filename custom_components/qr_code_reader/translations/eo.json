@@ -1,0 +1,56 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "QR-Kodo-Leganto",
+        "description": "Elektu la fotilon kaj kiom ofte skani. Ebligu almenaŭ unu antaŭpretigan vojon.",
+        "data": {
+          "entity_id": "Fotilo",
+          "name": "Nomo (laŭvola)",
+          "scan_interval": "Aŭtomata skana intervalo",
+          "use_original": "Originala kolora bildo",
+          "use_grayscale_enhancements": "Grizskalo kaj plibonigoj (aŭtomatkontrasto, egaligo, Otsu)",
+          "use_scaled": "Skalitaj variaĵoj (malrapidaj)",
+          "qr_only": "Ignoru strekkodojn"
+        },
+        "data_description": {
+          "entity_id": "Fotilo kiu disponigas senmovajn kadrojn por malkodado.",
+          "name": "Se malplena, la enta nomo estas generita aŭtomate (ekz. QR-enveturejo).",
+          "scan_interval": "Sekundoj inter aŭtomataj momentfotoj. Uzu 0 por neniuj aŭtomataj skanadoj; deĉenigi image_processing.scan permane kiam bezonate.",
+          "use_original": "Provu legi QR-kodon el la kadro unue, sen antaŭprilaborado.",
+          "use_grayscale_enhancements": "Provu bazajn bildplibonigojn antaŭ skanado (aŭtomata kontrasto, histograma egaligo, Otsu-sojlo).",
+          "use_scaled": "Provu plurajn reskalatajn versiojn; CPU-peza. Nur por tre malbonaj bildoj sur kapabla aparataro.",
+          "qr_only": "Kiam ĝi estas ebligita, nur QR-kodoj estas malkoditaj; aliaj strekkodspecoj estas preterlasitaj."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Ebligu almenaŭ unu antaŭpretigan grupon (originala bildo, plibonigoj de grizskalo aŭ skalo)."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Opcioj de QR Code Reader",
+        "description": "Ĝustigu skanan konduton. Ebligu almenaŭ unu antaŭpretigan vojon.",
+        "data": {
+          "scan_interval": "Aŭtomata skana intervalo",
+          "use_original": "Originala kolora bildo",
+          "use_grayscale_enhancements": "Grizskalo kaj plibonigoj (aŭtomatkontrasto, egaligo, Otsu)",
+          "use_scaled": "Skalitaj variaĵoj (malrapidaj)",
+          "qr_only": "Ignoru strekkodojn"
+        },
+        "data_description": {
+          "scan_interval": "Sekundoj inter aŭtomataj momentfotoj. Uzu 0 por neniuj aŭtomataj skanadoj; deĉenigi image_processing.scan permane kiam bezonate.",
+          "use_original": "Provu legi QR-kodon el la kadro unue, sen antaŭprilaborado.",
+          "use_grayscale_enhancements": "Provu bazajn bildplibonigojn antaŭ skanado (aŭtomata kontrasto, histograma egaligo, Otsu-sojlo).",
+          "use_scaled": "Provu plurajn reskalatajn versiojn; CPU-peza. Nur por tre malbonaj bildoj sur kapabla aparataro.",
+          "qr_only": "Kiam ĝi estas ebligita, nur QR-kodoj estas malkoditaj; aliaj strekkodspecoj estas preterlasitaj."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Ebligu almenaŭ unu antaŭpretigan grupon (originala bildo, plibonigoj de grizskalo aŭ skalo)."
+    }
+  }
+}

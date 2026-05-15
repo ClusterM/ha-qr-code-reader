@@ -1,0 +1,56 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Čitalnik kod QR",
+        "description": "Izberite kamero in pogostost skeniranja. Omogočite vsaj eno pot predprocesiranja.",
+        "data": {
+          "entity_id": "Kamera",
+          "name": "Ime (neobvezno)",
+          "scan_interval": "Samodejni interval skeniranja",
+          "use_original": "Originalna barvna slika",
+          "use_grayscale_enhancements": "Sivine in izboljšave (samodejni kontrast, izravnava, Otsu)",
+          "use_scaled": "Pomanjšane različice (počasne)",
+          "qr_only": "Ignorirajte črtne kode"
+        },
+        "data_description": {
+          "entity_id": "Kamera, ki zagotavlja fotografije za dekodiranje.",
+          "name": "Če je prazno, se ime entitete ustvari samodejno (npr. QR dovoz).",
+          "scan_interval": "Sekunde med samodejnimi posnetki. Uporabite 0 za brez samodejnega skeniranja; po potrebi ročno sproži image_processing.scan.",
+          "use_original": "Poskusite najprej prebrati kodo QR iz okvirja brez predhodne obdelave.",
+          "use_grayscale_enhancements": "Preizkusite osnovne izboljšave slike pred skeniranjem (samodejni kontrast, izenačitev histograma, prag Otsu).",
+          "use_scaled": "Poskusite več spremenjenih različic; CPU-težka. Samo za zelo slabe slike na zmogljivi strojni opremi.",
+          "qr_only": "Ko je omogočeno, so dekodirane samo kode QR; druge vrste črtne kode so preskočene."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Omogočite vsaj eno skupino za predhodno obdelavo (izvirna slika, izboljšave v sivinah ali pomanjšana)."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Možnosti bralnika kod QR",
+        "description": "Prilagodite vedenje skeniranja. Omogočite vsaj eno pot predprocesiranja.",
+        "data": {
+          "scan_interval": "Samodejni interval skeniranja",
+          "use_original": "Originalna barvna slika",
+          "use_grayscale_enhancements": "Sivine in izboljšave (samodejni kontrast, izravnava, Otsu)",
+          "use_scaled": "Pomanjšane različice (počasne)",
+          "qr_only": "Ignorirajte črtne kode"
+        },
+        "data_description": {
+          "scan_interval": "Sekunde med samodejnimi posnetki. Uporabite 0 za brez samodejnega skeniranja; po potrebi ročno sproži image_processing.scan.",
+          "use_original": "Poskusite najprej prebrati kodo QR iz okvirja brez predhodne obdelave.",
+          "use_grayscale_enhancements": "Preizkusite osnovne izboljšave slike pred skeniranjem (samodejni kontrast, izenačitev histograma, prag Otsu).",
+          "use_scaled": "Poskusite več spremenjenih različic; CPU-težka. Samo za zelo slabe slike na zmogljivi strojni opremi.",
+          "qr_only": "Ko je omogočeno, so dekodirane samo kode QR; druge vrste črtne kode so preskočene."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Omogočite vsaj eno skupino za predhodno obdelavo (izvirna slika, izboljšave v sivinah ali pomanjšana)."
+    }
+  }
+}

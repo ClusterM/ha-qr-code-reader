@@ -1,0 +1,56 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Lector de códigos QR",
+        "description": "Elija la cámara y con qué frecuencia escanear. Habilite al menos una ruta de preprocesamiento.",
+        "data": {
+          "entity_id": "Cámara",
+          "name": "Nombre (opcional)",
+          "scan_interval": "Intervalo de escaneo automático",
+          "use_original": "Imagen en color original",
+          "use_grayscale_enhancements": "Escala de grises y mejoras (contraste automático, ecualización, Otsu)",
+          "use_scaled": "Variantes escaladas (lentas)",
+          "qr_only": "Ignorar códigos de barras"
+        },
+        "data_description": {
+          "entity_id": "Cámara que proporciona fotogramas fijos para decodificar.",
+          "name": "Si está vacío, el nombre de la entidad se genera automáticamente (por ejemplo, camino de acceso QR).",
+          "scan_interval": "Segundos entre instantáneas automáticas. Utilice 0 para no realizar exploraciones automáticas; active image_processing.scan manualmente cuando sea necesario.",
+          "use_original": "Intente leer primero un código QR del marco, sin preprocesamiento.",
+          "use_grayscale_enhancements": "Pruebe mejoras básicas de la imagen antes de escanear (contraste automático, ecualización de histograma, umbral de Otsu).",
+          "use_scaled": "Pruebe varias versiones reescaladas; CPU pesada. Sólo para imágenes muy pobres en hardware capaz.",
+          "qr_only": "Cuando está habilitado, solo se decodifican los códigos QR; se omiten otros tipos de códigos de barras."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Habilite al menos un grupo de preprocesamiento (imagen original, mejoras en escala de grises o escalada)."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Opciones del lector de códigos QR",
+        "description": "Ajuste el comportamiento de escaneo. Habilite al menos una ruta de preprocesamiento.",
+        "data": {
+          "scan_interval": "Intervalo de escaneo automático",
+          "use_original": "Imagen en color original",
+          "use_grayscale_enhancements": "Escala de grises y mejoras (contraste automático, ecualización, Otsu)",
+          "use_scaled": "Variantes escaladas (lentas)",
+          "qr_only": "Ignorar códigos de barras"
+        },
+        "data_description": {
+          "scan_interval": "Segundos entre instantáneas automáticas. Utilice 0 para no realizar exploraciones automáticas; active image_processing.scan manualmente cuando sea necesario.",
+          "use_original": "Intente leer primero un código QR del marco, sin preprocesamiento.",
+          "use_grayscale_enhancements": "Pruebe mejoras básicas de la imagen antes de escanear (contraste automático, ecualización de histograma, umbral de Otsu).",
+          "use_scaled": "Pruebe varias versiones reescaladas; CPU pesada. Sólo para imágenes muy pobres en hardware capaz.",
+          "qr_only": "Cuando está habilitado, solo se decodifican los códigos QR; se omiten otros tipos de códigos de barras."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Habilite al menos un grupo de preprocesamiento (imagen original, mejoras en escala de grises o escalada)."
+    }
+  }
+}

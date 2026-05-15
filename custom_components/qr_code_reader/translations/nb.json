@@ -1,0 +1,56 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "QR-kodeleser",
+        "description": "Velg kamera og hvor ofte du vil skanne. Aktiver minst én forbehandlingsbane.",
+        "data": {
+          "entity_id": "Kamera",
+          "name": "Navn (valgfritt)",
+          "scan_interval": "Automatisk skanneintervall",
+          "use_original": "Originalt fargebilde",
+          "use_grayscale_enhancements": "Gråtoner og forbedringer (autokontrast, equalize, Otsu)",
+          "use_scaled": "Skalerte varianter (sakte)",
+          "qr_only": "Ignorer strekkoder"
+        },
+        "data_description": {
+          "entity_id": "Kamera som gir stillbilder for dekoding.",
+          "name": "Hvis tom, genereres enhetsnavnet automatisk (f.eks. QR-oppkjørselen).",
+          "scan_interval": "Sekunder mellom automatiske øyeblikksbilder. Bruk 0 for ingen automatiske skanninger; trigger image_processing.scan manuelt ved behov.",
+          "use_original": "Prøv å lese en QR-kode fra rammen først, uten forhåndsbehandling.",
+          "use_grayscale_enhancements": "Prøv grunnleggende bildeforbedringer før skanning (autokontrast, histogramutjevning, Otsu-terskel).",
+          "use_scaled": "Prøv flere omskalerte versjoner; CPU-tung. Bare for svært dårlige bilder på kapabel maskinvare.",
+          "qr_only": "Når aktivert, dekodes bare QR-koder; andre strekkodetyper hoppes over."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Aktiver minst én forbehandlingsgruppe (originalbilde, gråtoneforbedringer eller skalert)."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Alternativer for QR-kodeleser",
+        "description": "Juster skanneatferd. Aktiver minst én forbehandlingsbane.",
+        "data": {
+          "scan_interval": "Automatisk skanneintervall",
+          "use_original": "Originalt fargebilde",
+          "use_grayscale_enhancements": "Gråtoner og forbedringer (autokontrast, equalize, Otsu)",
+          "use_scaled": "Skalerte varianter (sakte)",
+          "qr_only": "Ignorer strekkoder"
+        },
+        "data_description": {
+          "scan_interval": "Sekunder mellom automatiske øyeblikksbilder. Bruk 0 for ingen automatiske skanninger; trigger image_processing.scan manuelt ved behov.",
+          "use_original": "Prøv å lese en QR-kode fra rammen først, uten forhåndsbehandling.",
+          "use_grayscale_enhancements": "Prøv grunnleggende bildeforbedringer før skanning (autokontrast, histogramutjevning, Otsu-terskel).",
+          "use_scaled": "Prøv flere omskalerte versjoner; CPU-tung. Bare for svært dårlige bilder på kapabel maskinvare.",
+          "qr_only": "Når aktivert, dekodes bare QR-koder; andre strekkodetyper hoppes over."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Aktiver minst én forbehandlingsgruppe (originalbilde, gråtoneforbedringer eller skalert)."
+    }
+  }
+}

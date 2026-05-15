@@ -1,0 +1,56 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "QR kód olvasó",
+        "description": "Válassza ki a kamerát és a szkennelés gyakoriságát. Engedélyezzen legalább egy előfeldolgozási útvonalat.",
+        "data": {
+          "entity_id": "Kamera",
+          "name": "Név (nem kötelező)",
+          "scan_interval": "Automatikus szkennelési intervallum",
+          "use_original": "Eredeti színes kép",
+          "use_grayscale_enhancements": "Szürkeárnyalatos és javítások (autokontraszt, kiegyenlítés, Otsu)",
+          "use_scaled": "Méretezett változatok (lassú)",
+          "qr_only": "A vonalkódok figyelmen kívül hagyása"
+        },
+        "data_description": {
+          "entity_id": "Fényképezőgép, amely állóképeket biztosít a dekódoláshoz.",
+          "name": "Ha üres, akkor az entitásnév automatikusan generálódik (pl. QR autóút).",
+          "scan_interval": "Másodpercek az automatikus pillanatképek között. Használja a 0-t, ha nincs automatikus keresés; szükség esetén manuálisan indítsa el az image_processing.scan fájlt.",
+          "use_original": "Először próbáljon kiolvasni egy QR-kódot a keretből, előzetes feldolgozás nélkül.",
+          "use_grayscale_enhancements": "Szkennelés előtt próbáljon ki alapvető képjavításokat (autokontraszt, hisztogram kiegyenlítés, Otsu-küszöb).",
+          "use_scaled": "Próbáljon ki több átméretezett verziót; CPU-nehéz. Csak nagyon gyenge képekhez alkalmas hardveren.",
+          "qr_only": "Ha engedélyezve van, csak a QR-kódok dekódolása történik meg; a többi vonalkód típus kimarad."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Engedélyezzen legalább egy előfeldolgozási csoportot (eredeti kép, szürkeárnyalatos javítások vagy átméretezett)."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "QR-kód olvasó opciók",
+        "description": "Állítsa be a szkennelési viselkedést. Engedélyezzen legalább egy előfeldolgozási útvonalat.",
+        "data": {
+          "scan_interval": "Automatikus szkennelési intervallum",
+          "use_original": "Eredeti színes kép",
+          "use_grayscale_enhancements": "Szürkeárnyalatos és javítások (autokontraszt, kiegyenlítés, Otsu)",
+          "use_scaled": "Méretezett változatok (lassú)",
+          "qr_only": "A vonalkódok figyelmen kívül hagyása"
+        },
+        "data_description": {
+          "scan_interval": "Másodpercek az automatikus pillanatképek között. Használja a 0-t, ha nincs automatikus keresés; szükség esetén manuálisan indítsa el az image_processing.scan fájlt.",
+          "use_original": "Először próbáljon kiolvasni egy QR-kódot a keretből, előzetes feldolgozás nélkül.",
+          "use_grayscale_enhancements": "Szkennelés előtt próbáljon ki alapvető képjavításokat (autokontraszt, hisztogram kiegyenlítés, Otsu-küszöb).",
+          "use_scaled": "Próbáljon ki több átméretezett verziót; CPU-nehéz. Csak nagyon gyenge képekhez alkalmas hardveren.",
+          "qr_only": "Ha engedélyezve van, csak a QR-kódok dekódolása történik meg; a többi vonalkód típus kimarad."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Engedélyezzen legalább egy előfeldolgozási csoportot (eredeti kép, szürkeárnyalatos javítások vagy átméretezett)."
+    }
+  }
+}

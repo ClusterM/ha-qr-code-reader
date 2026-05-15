@@ -1,0 +1,56 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "QR-codelezer",
+        "description": "Kies de camera en hoe vaak u wilt scannen. Schakel ten minste één voorverwerkingspad in.",
+        "data": {
+          "entity_id": "Camera",
+          "name": "Naam (optioneel)",
+          "scan_interval": "Automatisch scaninterval",
+          "use_original": "Origineel kleurenbeeld",
+          "use_grayscale_enhancements": "Grijstinten en verbeteringen (autocontrast, egaliseren, Otsu)",
+          "use_scaled": "Geschaalde varianten (langzaam)",
+          "qr_only": "Negeer streepjescodes"
+        },
+        "data_description": {
+          "entity_id": "Camera die stilstaande beelden levert voor decodering.",
+          "name": "Indien leeg, wordt de entiteitsnaam automatisch gegenereerd (bijvoorbeeld QR-oprit).",
+          "scan_interval": "Seconden tussen automatische snapshots. Gebruik 0 voor geen automatische scans; activeer image_processing.scan indien nodig handmatig.",
+          "use_original": "Probeer eerst een QR-code uit het frame te lezen, zonder voorbewerking.",
+          "use_grayscale_enhancements": "Probeer elementaire beeldverbeteringen voordat u gaat scannen (autocontrast, histogram-equalisatie, Otsu-drempel).",
+          "use_scaled": "Probeer meerdere opnieuw geschaalde versies; CPU-zwaar. Alleen voor zeer slechte beelden op geschikte hardware.",
+          "qr_only": "Indien ingeschakeld, worden alleen QR-codes gedecodeerd; andere typen streepjescodes worden overgeslagen."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Schakel ten minste één voorverwerkingsgroep in (oorspronkelijke afbeelding, grijswaardenverbeteringen of geschaald)."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Opties voor QR-codelezer",
+        "description": "Pas het scangedrag aan. Schakel ten minste één voorverwerkingspad in.",
+        "data": {
+          "scan_interval": "Automatisch scaninterval",
+          "use_original": "Origineel kleurenbeeld",
+          "use_grayscale_enhancements": "Grijstinten en verbeteringen (autocontrast, egaliseren, Otsu)",
+          "use_scaled": "Geschaalde varianten (langzaam)",
+          "qr_only": "Negeer streepjescodes"
+        },
+        "data_description": {
+          "scan_interval": "Seconden tussen automatische snapshots. Gebruik 0 voor geen automatische scans; activeer image_processing.scan indien nodig handmatig.",
+          "use_original": "Probeer eerst een QR-code uit het frame te lezen, zonder voorbewerking.",
+          "use_grayscale_enhancements": "Probeer elementaire beeldverbeteringen voordat u gaat scannen (autocontrast, histogram-equalisatie, Otsu-drempel).",
+          "use_scaled": "Probeer meerdere opnieuw geschaalde versies; CPU-zwaar. Alleen voor zeer slechte beelden op geschikte hardware.",
+          "qr_only": "Indien ingeschakeld, worden alleen QR-codes gedecodeerd; andere typen streepjescodes worden overgeslagen."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Schakel ten minste één voorverwerkingsgroep in (oorspronkelijke afbeelding, grijswaardenverbeteringen of geschaald)."
+    }
+  }
+}

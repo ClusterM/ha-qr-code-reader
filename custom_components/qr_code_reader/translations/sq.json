@@ -1,0 +1,56 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Lexuesi i kodit QR",
+        "description": "Zgjidhni kamerën dhe sa shpesh të skanoni. Aktivizo të paktën një shteg parapërpunimi.",
+        "data": {
+          "entity_id": "Kamera",
+          "name": "Emri (opsionale)",
+          "scan_interval": "Intervali automatik i skanimit",
+          "use_original": "Imazhi origjinal me ngjyra",
+          "use_grayscale_enhancements": "Shkalla e gri dhe përmirësimet (autokontrast, barazimi, Otsu)",
+          "use_scaled": "Variantet e shkallëzuara (të ngadalta)",
+          "qr_only": "Injoroni barkodet"
+        },
+        "data_description": {
+          "entity_id": "Kamera që ofron korniza të palëvizshme për dekodim.",
+          "name": "Nëse është bosh, emri i entitetit gjenerohet automatikisht (p.sh. rrugë me makinë QR).",
+          "scan_interval": "Sekonda midis fotove automatike. Përdorni 0 për asnjë skanim automatik; aktivizoni image_processing.skanoni manualisht kur nevojitet.",
+          "use_original": "Provoni së pari të lexoni një kod QR nga korniza, pa u parapërpunuar.",
+          "use_grayscale_enhancements": "Provoni përmirësimet bazë të imazhit përpara skanimit (autokontrast, barazimi i histogramit, pragu Otsu).",
+          "use_scaled": "Provoni versione të shumta të rishkallëzuara; CPU-i rëndë. Vetëm për imazhe shumë të dobëta në harduer të aftë.",
+          "qr_only": "Kur aktivizohet, deshifrohen vetëm kodet QR; Llojet e tjera të barkodit janë anashkaluar."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Aktivizo të paktën një grup parapërpunues (imazhi origjinal, përmirësime në shkallë gri ose të shkallëzuar)."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Opsionet e lexuesit të kodit QR",
+        "description": "Rregulloni sjelljen e skanimit. Aktivizo të paktën një shteg parapërpunimi.",
+        "data": {
+          "scan_interval": "Intervali automatik i skanimit",
+          "use_original": "Imazhi origjinal me ngjyra",
+          "use_grayscale_enhancements": "Shkalla e gri dhe përmirësimet (autokontrast, barazimi, Otsu)",
+          "use_scaled": "Variantet e shkallëzuara (të ngadalta)",
+          "qr_only": "Injoroni barkodet"
+        },
+        "data_description": {
+          "scan_interval": "Sekonda midis fotove automatike. Përdorni 0 për asnjë skanim automatik; aktivizoni image_processing.skanoni manualisht kur nevojitet.",
+          "use_original": "Provoni së pari të lexoni një kod QR nga korniza, pa u parapërpunuar.",
+          "use_grayscale_enhancements": "Provoni përmirësimet bazë të imazhit përpara skanimit (autokontrast, barazimi i histogramit, pragu Otsu).",
+          "use_scaled": "Provoni versione të shumta të rishkallëzuara; CPU-i rëndë. Vetëm për imazhe shumë të dobëta në harduer të aftë.",
+          "qr_only": "Kur aktivizohet, deshifrohen vetëm kodet QR; Llojet e tjera të barkodit janë anashkaluar."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Aktivizo të paktën një grup parapërpunues (imazhi origjinal, përmirësime në shkallë gri ose të shkallëzuar)."
+    }
+  }
+}

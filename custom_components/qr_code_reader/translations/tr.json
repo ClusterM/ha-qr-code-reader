@@ -1,0 +1,56 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "QR Kod Okuyucu",
+        "description": "Kamerayı ve ne sıklıkla taranacağını seçin. En az bir ön işleme yolunu etkinleştirin.",
+        "data": {
+          "entity_id": "Kamera",
+          "name": "Ad (isteğe bağlı)",
+          "scan_interval": "Otomatik tarama aralığı",
+          "use_original": "Orijinal renkli görüntü",
+          "use_grayscale_enhancements": "Gri tonlama ve geliştirmeler (otomatik kontrast, eşitleme, Otsu)",
+          "use_scaled": "Ölçeklendirilmiş çeşitler (yavaş)",
+          "qr_only": "Barkodları yoksay"
+        },
+        "data_description": {
+          "entity_id": "Kod çözme için sabit kareler sağlayan kamera.",
+          "name": "Boşsa varlık adı otomatik olarak oluşturulur (ör. QR araba yolu).",
+          "scan_interval": "Otomatik anlık görüntüler arasındaki saniyeler. Otomatik tarama olmaması için 0'ı kullanın; gerektiğinde image_processing.scan'i manuel olarak tetikleyin.",
+          "use_original": "Ön işleme gerek kalmadan önce çerçeveden bir QR kodu okumayı deneyin.",
+          "use_grayscale_enhancements": "Taramadan önce temel görüntü iyileştirmelerini deneyin (otomatik kontrast, histogram eşitleme, Otsu eşiği).",
+          "use_scaled": "Birden çok yeniden ölçeklendirilmiş sürümü deneyin; CPU ağırlıklı. Yalnızca yetenekli donanımdaki çok zayıf görüntüler için.",
+          "qr_only": "Etkinleştirildiğinde yalnızca QR kodlarının kodu çözülür; diğer barkod türleri atlanır."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "En az bir ön işleme grubunu etkinleştirin (orijinal görüntü, gri tonlamalı geliştirmeler veya ölçeklendirilmiş)."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "QR Kod Okuyucu seçenekleri",
+        "description": "Tarama davranışını ayarlayın. En az bir ön işleme yolunu etkinleştirin.",
+        "data": {
+          "scan_interval": "Otomatik tarama aralığı",
+          "use_original": "Orijinal renkli görüntü",
+          "use_grayscale_enhancements": "Gri tonlama ve geliştirmeler (otomatik kontrast, eşitleme, Otsu)",
+          "use_scaled": "Ölçeklendirilmiş çeşitler (yavaş)",
+          "qr_only": "Barkodları yoksay"
+        },
+        "data_description": {
+          "scan_interval": "Otomatik anlık görüntüler arasındaki saniyeler. Otomatik tarama olmaması için 0'ı kullanın; gerektiğinde image_processing.scan'i manuel olarak tetikleyin.",
+          "use_original": "Ön işleme gerek kalmadan önce çerçeveden bir QR kodu okumayı deneyin.",
+          "use_grayscale_enhancements": "Taramadan önce temel görüntü iyileştirmelerini deneyin (otomatik kontrast, histogram eşitleme, Otsu eşiği).",
+          "use_scaled": "Birden çok yeniden ölçeklendirilmiş sürümü deneyin; CPU ağırlıklı. Yalnızca yetenekli donanımdaki çok zayıf görüntüler için.",
+          "qr_only": "Etkinleştirildiğinde yalnızca QR kodlarının kodu çözülür; diğer barkod türleri atlanır."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "En az bir ön işleme grubunu etkinleştirin (orijinal görüntü, gri tonlamalı geliştirmeler veya ölçeklendirilmiş)."
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Đầu đọc mã QR",
+        "description": "Chọn máy ảnh và tần suất quét. Kích hoạt ít nhất một đường dẫn tiền xử lý.",
+        "data": {
+          "entity_id": "Máy ảnh",
+          "name": "Tên (tùy chọn)",
+          "scan_interval": "Khoảng thời gian quét tự động",
+          "use_original": "Hình ảnh màu gốc",
+          "use_grayscale_enhancements": "Thang độ xám và các cải tiến (tự động tương phản, cân bằng, Otsu)",
+          "use_scaled": "Các biến thể tỷ lệ (chậm)",
+          "qr_only": "Bỏ qua mã vạch"
+        },
+        "data_description": {
+          "entity_id": "Camera cung cấp các khung hình tĩnh để giải mã.",
+          "name": "Nếu trống, tên thực thể sẽ được tạo tự động (ví dụ: đường lái xe QR).",
+          "scan_interval": "Giây giữa các ảnh chụp nhanh tự động. Sử dụng 0 nếu không quét tự động; kích hoạt image_processing.scan theo cách thủ công khi cần.",
+          "use_original": "Trước tiên, hãy thử đọc mã QR từ khung mà không cần xử lý trước.",
+          "use_grayscale_enhancements": "Hãy thử các cải tiến hình ảnh cơ bản trước khi quét (độ tương phản tự động, cân bằng biểu đồ, ngưỡng Otsu).",
+          "use_scaled": "Hãy thử nhiều phiên bản được thay đổi kích thước; CPU nặng. Chỉ dành cho hình ảnh rất kém trên phần cứng có khả năng.",
+          "qr_only": "Khi được bật, chỉ mã QR mới được giải mã; các loại mã vạch khác bị bỏ qua."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Kích hoạt ít nhất một nhóm tiền xử lý (ảnh gốc, cải tiến thang độ xám hoặc chia tỷ lệ)."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Tùy chọn trình đọc mã QR",
+        "description": "Điều chỉnh hành vi quét. Kích hoạt ít nhất một đường dẫn tiền xử lý.",
+        "data": {
+          "scan_interval": "Khoảng thời gian quét tự động",
+          "use_original": "Hình ảnh màu gốc",
+          "use_grayscale_enhancements": "Thang độ xám và các cải tiến (tự động tương phản, cân bằng, Otsu)",
+          "use_scaled": "Các biến thể tỷ lệ (chậm)",
+          "qr_only": "Bỏ qua mã vạch"
+        },
+        "data_description": {
+          "scan_interval": "Giây giữa các ảnh chụp nhanh tự động. Sử dụng 0 nếu không quét tự động; kích hoạt image_processing.scan theo cách thủ công khi cần.",
+          "use_original": "Trước tiên, hãy thử đọc mã QR từ khung mà không cần xử lý trước.",
+          "use_grayscale_enhancements": "Hãy thử các cải tiến hình ảnh cơ bản trước khi quét (độ tương phản tự động, cân bằng biểu đồ, ngưỡng Otsu).",
+          "use_scaled": "Hãy thử nhiều phiên bản được thay đổi kích thước; CPU nặng. Chỉ dành cho hình ảnh rất kém trên phần cứng có khả năng.",
+          "qr_only": "Khi được bật, chỉ mã QR mới được giải mã; các loại mã vạch khác bị bỏ qua."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Kích hoạt ít nhất một nhóm tiền xử lý (ảnh gốc, cải tiến thang độ xám hoặc chia tỷ lệ)."
+    }
+  }
+}

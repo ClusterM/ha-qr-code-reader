@@ -1,0 +1,56 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Čitač QR kodova",
+        "description": "Odaberite kameru i koliko često želite skenirati. Omogućite barem jednu putanju za prethodnu obradu.",
+        "data": {
+          "entity_id": "Kamera",
+          "name": "Ime (opcionalno)",
+          "scan_interval": "Automatski interval skeniranja",
+          "use_original": "Originalna slika u boji",
+          "use_grayscale_enhancements": "Nijanse sive i poboljšanja (autokontrast, ekvilajzer, Otsu)",
+          "use_scaled": "Skalirane varijante (sporo)",
+          "qr_only": "Ignorirajte bar kodove"
+        },
+        "data_description": {
+          "entity_id": "Kamera koja daje statične kadrove za dekodiranje.",
+          "name": "Ako je prazno, naziv entiteta se generira automatski (npr. QR prilaz).",
+          "scan_interval": "Sekunde između automatskih snimaka. Koristite 0 za bez automatskog skeniranja; pokrenuti image_processing.scan ručno kada je potrebno.",
+          "use_original": "Pokušajte prvo pročitati QR kod iz okvira, bez prethodne obrade.",
+          "use_grayscale_enhancements": "Isprobajte osnovna poboljšanja slike prije skeniranja (autokontrast, izjednačavanje histograma, Otsu prag).",
+          "use_scaled": "Isprobajte višestruko reskalirane verzije; CPU-heavy. Samo za vrlo loše slike na sposobnom hardveru.",
+          "qr_only": "Kada je omogućeno, samo QR kodovi se dekodiraju; druge vrste bar kodova se preskaču."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Omogućite barem jednu grupu za prethodnu obradu (originalna slika, poboljšanja u sivim tonovima ili skalirana)."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Opcije čitača QR kodova",
+        "description": "Podesite ponašanje skeniranja. Omogućite barem jednu putanju za prethodnu obradu.",
+        "data": {
+          "scan_interval": "Automatski interval skeniranja",
+          "use_original": "Originalna slika u boji",
+          "use_grayscale_enhancements": "Nijanse sive i poboljšanja (autokontrast, ekvilajzer, Otsu)",
+          "use_scaled": "Skalirane varijante (sporo)",
+          "qr_only": "Ignorirajte bar kodove"
+        },
+        "data_description": {
+          "scan_interval": "Sekunde između automatskih snimaka. Koristite 0 za bez automatskog skeniranja; pokrenuti image_processing.scan ručno kada je potrebno.",
+          "use_original": "Pokušajte prvo pročitati QR kod iz okvira, bez prethodne obrade.",
+          "use_grayscale_enhancements": "Isprobajte osnovna poboljšanja slike prije skeniranja (autokontrast, izjednačavanje histograma, Otsu prag).",
+          "use_scaled": "Isprobajte višestruko reskalirane verzije; CPU-heavy. Samo za vrlo loše slike na sposobnom hardveru.",
+          "qr_only": "Kada je omogućeno, samo QR kodovi se dekodiraju; druge vrste bar kodova se preskaču."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Omogućite barem jednu grupu za prethodnu obradu (originalna slika, poboljšanja u sivim tonovima ili skalirana)."
+    }
+  }
+}

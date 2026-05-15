@@ -1,0 +1,56 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "QR-kodelæser",
+        "description": "Vælg kameraet og hvor ofte der skal scannes. Aktiver mindst én forbehandlingssti.",
+        "data": {
+          "entity_id": "Kamera",
+          "name": "Navn (valgfrit)",
+          "scan_interval": "Automatisk scanningsinterval",
+          "use_original": "Originalt farvebillede",
+          "use_grayscale_enhancements": "Gråtoner og forbedringer (autokontrast, udligning, Otsu)",
+          "use_scaled": "Skalerede varianter (langsom)",
+          "qr_only": "Ignorer stregkoder"
+        },
+        "data_description": {
+          "entity_id": "Kamera, der giver stillbilleder til afkodning.",
+          "name": "Hvis den er tom, genereres enhedsnavnet automatisk (f.eks. QR-indkørsel).",
+          "scan_interval": "Sekunder mellem automatiske snapshots. Brug 0 for ingen automatiske scanninger; trigger image_processing.scan manuelt, når det er nødvendigt.",
+          "use_original": "Prøv først at læse en QR-kode fra rammen uden forbehandling.",
+          "use_grayscale_enhancements": "Prøv grundlæggende billedforbedringer før scanning (autokontrast, histogramudligning, Otsu-tærskel).",
+          "use_scaled": "Prøv flere omskalerede versioner; CPU-tung. Kun for meget dårlige billeder på egnet hardware.",
+          "qr_only": "Når det er aktiveret, afkodes kun QR-koder; andre stregkodetyper springes over."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Aktiver mindst én forbehandlingsgruppe (oprindeligt billede, gråtoneforbedringer eller skaleret)."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Valgmuligheder for QR-kodelæser",
+        "description": "Juster scanningsadfærd. Aktiver mindst én forbehandlingssti.",
+        "data": {
+          "scan_interval": "Automatisk scanningsinterval",
+          "use_original": "Originalt farvebillede",
+          "use_grayscale_enhancements": "Gråtoner og forbedringer (autokontrast, udligning, Otsu)",
+          "use_scaled": "Skalerede varianter (langsom)",
+          "qr_only": "Ignorer stregkoder"
+        },
+        "data_description": {
+          "scan_interval": "Sekunder mellem automatiske snapshots. Brug 0 for ingen automatiske scanninger; trigger image_processing.scan manuelt, når det er nødvendigt.",
+          "use_original": "Prøv først at læse en QR-kode fra rammen uden forbehandling.",
+          "use_grayscale_enhancements": "Prøv grundlæggende billedforbedringer før scanning (autokontrast, histogramudligning, Otsu-tærskel).",
+          "use_scaled": "Prøv flere omskalerede versioner; CPU-tung. Kun for meget dårlige billeder på egnet hardware.",
+          "qr_only": "Når det er aktiveret, afkodes kun QR-koder; andre stregkodetyper springes over."
+        }
+      }
+    },
+    "error": {
+      "pipeline_required": "Aktiver mindst én forbehandlingsgruppe (oprindeligt billede, gråtoneforbedringer eller skaleret)."
+    }
+  }
+}
