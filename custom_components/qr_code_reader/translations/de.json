@@ -20,7 +20,7 @@
           "use_original": "Versuchen Sie zunächst, ohne Vorverarbeitung einen QR-Code aus dem Rahmen zu lesen.",
           "use_grayscale_enhancements": "Probieren Sie vor dem Scannen grundlegende Bildverbesserungen aus (Autokontrast, Histogrammausgleich, Otsu-Schwellenwert).",
           "use_scaled": "Probieren Sie mehrere neu skalierte Versionen aus; CPU-lastig. Nur für sehr schlechte Bilder auf leistungsfähiger Hardware.",
-          "qr_only": "Wenn aktiviert, werden nur QR-Codes dekodiert; Andere Barcodetypen werden übersprungen."
+          "qr_only": "Wenn aktiviert, werden nur QR-Codes dekodiert; andere Barcodetypen werden übersprungen."
         }
       }
     },
@@ -45,7 +45,7 @@
           "use_original": "Versuchen Sie zunächst, ohne Vorverarbeitung einen QR-Code aus dem Rahmen zu lesen.",
           "use_grayscale_enhancements": "Probieren Sie vor dem Scannen grundlegende Bildverbesserungen aus (Autokontrast, Histogrammausgleich, Otsu-Schwellenwert).",
           "use_scaled": "Probieren Sie mehrere neu skalierte Versionen aus; CPU-lastig. Nur für sehr schlechte Bilder auf leistungsfähiger Hardware.",
-          "qr_only": "Wenn aktiviert, werden nur QR-Codes dekodiert; Andere Barcodetypen werden übersprungen."
+          "qr_only": "Wenn aktiviert, werden nur QR-Codes dekodiert; andere Barcodetypen werden übersprungen."
         }
       }
     },

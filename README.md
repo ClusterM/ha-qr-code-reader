@@ -14,7 +14,7 @@ I needed reliable QR and barcode reading inside Home Assistant. I was surprised 
 - **QR-only mode** to skip linear barcodes if you only care about QR.
 - **`image_processing` entity** with decoded payload as state; last successful scan metadata in the **`scan_json`** attribute (compact JSON: decode path, symbol type, geometry, quality, orientation where available).
 - **Sensible logging**: routine scan messages drop to `debug` when the timer interval is short (under 10 seconds) so logs do not flood; manual scans and slower intervals stay at `info`.
-- **Translations** for all [Home Assistant frontend languages](https://github.com/home-assistant/core/blob/dev/homeassistant/generated/languages.py); English and Russian are curated, the rest are machine-translated (improvements welcome via PR).
+- **Translations** for all [Home Assistant frontend languages](https://github.com/home-assistant/core/blob/dev/homeassistant/generated/languages.py). **English** and **Russian** are hand-written or reviewed; other locales came from automated translation and were spot-checked — fine for the UI, occasionally a bit stiff. PRs that polish wording are welcome.
 
 ## Requirements
 
@@ -72,22 +72,6 @@ Copy the `custom_components/qr_code_reader` folder from this repository into you
 - **Errors mentioning zbar / pyzbar:** install OS-level **ZBar** in the Home Assistant environment.
 - **Verbose logs on a fast interval:** set the logger to `debug` only when needed, e.g.  
   `custom_components.qr_code_reader: debug` — routine timer messages for intervals under 10 s are already logged at debug.
-
-## Translations
-
-Strings live under `custom_components/qr_code_reader/translations/`. To regenerate machine-assisted locales (requires `deep-translator`):
-
-```bash
-python3 scripts/generate_translations.py
-```
-
-For a subset:
-
-```bash
-GENERATE_TRANSLATIONS_ONLY=de,fr,es python3 scripts/generate_translations.py
-```
-
-Russian (`ru.json`) is maintained manually and skipped by the script.
 
 ## License
 
