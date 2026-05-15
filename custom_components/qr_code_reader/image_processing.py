@@ -222,7 +222,7 @@ class QrEntity(ImageProcessingEntity):
         self._quiet_routine_depth = 0
 
     def _log_scan_routine(self, msg: str, *args: Any, quiet: bool) -> None:
-        """INFO for manual / slow polling; DEBUG for fast timer-driven scans."""
+        """Routine start / no barcode: INFO or DEBUG; successful decode is always INFO."""
         if quiet:
             _LOGGER.debug(msg, *args)
         else:
@@ -311,12 +311,11 @@ class QrEntity(ImageProcessingEntity):
                     payload = first.data.decode("utf-8")
                     self._attr_state = payload
                     self._scan_json = scan_metadata_json(method, first)
-                    self._log_scan_routine(
+                    _LOGGER.info(
                         "QR scan for %s succeeded (method=%s): %s",
                         self.entity_id,
                         method,
                         payload,
-                        quiet=quiet,
                     )
                 else:
                     self._attr_state = None
