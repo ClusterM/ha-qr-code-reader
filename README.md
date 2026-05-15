@@ -6,6 +6,8 @@
 
 I needed reliable QR and barcode reading inside Home Assistant. I was surprised that the obvious options were old legacy pieces that barely held together and were painful to use. So I ended up writing my own integration from scratch, with a clear config flow, sensible defaults, and decoding that actually works on real camera frames.
 
+**Disclaimer:** this is honest-to-goodness **vibe-coded** software — I asked a large language model to help build and iterate on it (architecture, code, docs, i18n, release hygiene). Treat it like any other small OSS project: review if you care, file issues if something breaks, and enjoy the ride.
+
 ## Features
 
 - **QR codes and common barcodes** via [pyzbar](https://github.com/NaturalHistoryMuseum/pyzbar) / ZBar.
