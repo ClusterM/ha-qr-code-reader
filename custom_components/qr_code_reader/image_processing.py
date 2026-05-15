@@ -33,7 +33,6 @@ from .const import (
     CONF_USE_GRAYSCALE_ENHANCEMENTS,
     CONF_USE_ORIGINAL,
     CONF_USE_SCALED,
-    SCAN_ROUTINE_LOG_DEBUG_BELOW_SEC,
     SCALE_FACTORS,
     merged_options,
 )
@@ -202,7 +201,6 @@ class QrEntity(ImageProcessingEntity):
     """A QR image processing entity."""
 
     _scan_json: str | None
-    _quiet_routine_depth: int
 
     def __init__(self, entry: ConfigEntry) -> None:
         """Initialize QR image processing entity."""
@@ -219,14 +217,6 @@ class QrEntity(ImageProcessingEntity):
         self._attr_should_poll = False
         self._attr_state = None
         self._scan_json = None
-        self._quiet_routine_depth = 0
-
-    def _log_scan_routine(self, msg: str, *args: Any, quiet: bool) -> None:
-        """Routine start / no barcode: INFO or DEBUG; successful decode is always INFO."""
-        if quiet:
-            _LOGGER.debug(msg, *args)
-        else:
-            _LOGGER.info(msg, *args)
 
     @property
     def extra_state_attributes(self) -> dict[str, Any]:
@@ -248,19 +238,7 @@ class QrEntity(ImageProcessingEntity):
         def _fire(_now: datetime) -> None:
             def _schedule_update() -> None:
                 async def _timer_scan() -> None:
-                    """Timer path: async_update may return before process_image runs in executor."""
-                    interval = self._options()[CONF_SCAN_INTERVAL]
-                    use_quiet = interval < SCAN_ROUTINE_LOG_DEBUG_BELOW_SEC
-                    if use_quiet:
-                        self._quiet_routine_depth += 1
-                    try:
-                        await self.async_update_ha_state(True)
-                    except BaseException:
-                        if use_quiet:
-                            self._quiet_routine_depth = max(
-                                0, self._quiet_routine_depth - 1
-                            )
-                        raise
+                    await self.async_update_ha_state(True)
 
                 self.hass.async_create_task(_timer_scan())
 
@@ -289,65 +267,59 @@ class QrEntity(ImageProcessingEntity):
 
     def process_image(self, image: bytes) -> None:
         """Process image."""
-        quiet = self._quiet_routine_depth > 0
+        _LOGGER.debug("Starting QR scan for %s", self.entity_id)
+        opts = self._options()
         try:
-            self._log_scan_routine(
-                "Starting QR scan for %s", self.entity_id, quiet=quiet
-            )
-            opts = self._options()
-            try:
-                stream = io.BytesIO(image)
-                img = Image.open(stream)
+            stream = io.BytesIO(image)
+            img = Image.open(stream)
 
-                barcodes, method = decode_best_effort(
-                    img,
-                    use_original=opts[CONF_USE_ORIGINAL],
-                    use_grayscale_enhancements=opts[CONF_USE_GRAYSCALE_ENHANCEMENTS],
-                    use_scaled=opts[CONF_USE_SCALED],
-                    qr_only=opts[CONF_QR_ONLY],
+            barcodes, method = decode_best_effort(
+                img,
+                use_original=opts[CONF_USE_ORIGINAL],
+                use_grayscale_enhancements=opts[CONF_USE_GRAYSCALE_ENHANCEMENTS],
+                use_scaled=opts[CONF_USE_SCALED],
+                qr_only=opts[CONF_QR_ONLY],
+            )
+            if barcodes:
+                first = barcodes[0]
+                payload = first.data.decode("utf-8")
+                self._attr_state = payload
+                self._scan_json = scan_metadata_json(method, first)
+                _LOGGER.info(
+                    "QR scan for %s succeeded: payload=%r decode_method=%s %s=%s",
+                    self.entity_id,
+                    payload,
+                    method,
+                    ATTR_SCAN_JSON,
+                    self._scan_json,
                 )
-                if barcodes:
-                    first = barcodes[0]
-                    payload = first.data.decode("utf-8")
-                    self._attr_state = payload
-                    self._scan_json = scan_metadata_json(method, first)
-                    _LOGGER.info(
-                        "QR scan for %s succeeded (method=%s): %s",
-                        self.entity_id,
-                        method,
-                        payload,
-                    )
-                else:
-                    self._attr_state = None
-                    self._scan_json = None
-                    self._log_scan_routine(
-                        "QR scan for %s completed: no barcode detected",
-                        self.entity_id,
-                        quiet=quiet,
-                    )
-            except UnicodeDecodeError as err:
+            else:
                 self._attr_state = None
                 self._scan_json = None
-                _LOGGER.error(
-                    "QR scan for %s failed: barcode data is not valid UTF-8: %s",
-                    self.entity_id,
-                    err,
-                )
-            except (OSError, ValueError) as err:
-                self._attr_state = None
-                self._scan_json = None
-                _LOGGER.error(
-                    "QR scan for %s failed while reading or decoding image: %s",
-                    self.entity_id,
-                    err,
-                )
-            except Exception:  # noqa: BLE001
-                self._attr_state = None
-                self._scan_json = None
-                _LOGGER.exception(
-                    "QR scan for %s failed with an unexpected error",
+                _LOGGER.debug(
+                    "QR scan for %s completed: no barcode detected",
                     self.entity_id,
                 )
-        finally:
-            if quiet:
-                self._quiet_routine_depth = max(0, self._quiet_routine_depth - 1)
+        except UnicodeDecodeError as err:
+            self._attr_state = None
+            self._scan_json = None
+            _LOGGER.error(
+                "QR scan for %s failed: barcode data is not valid UTF-8: %s",
+                self.entity_id,
+                err,
+            )
+        except (OSError, ValueError) as err:
+            self._attr_state = None
+            self._scan_json = None
+            _LOGGER.error(
+                "QR scan for %s failed while reading or decoding image: %s",
+                self.entity_id,
+                err,
+            )
+        except Exception:  # noqa: BLE001
+            self._attr_state = None
+            self._scan_json = None
+            _LOGGER.exception(
+                "QR scan for %s failed with an unexpected error",
+                self.entity_id,
+            )

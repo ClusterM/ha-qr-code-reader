@@ -15,7 +15,7 @@ I needed reliable QR and barcode reading inside Home Assistant. I was surprised 
 - **Automatic scanning** on an interval, or **interval `0`** for on-demand use only (call `image_processing.scan` when you need a read).
 - **QR-only mode** to skip linear barcodes if you only care about QR.
 - **`image_processing` entity** with decoded payload as state; last successful scan metadata in the **`scan_json`** attribute (compact JSON: decode path, symbol type, geometry, quality, orientation where available).
-- **Sensible logging**: routine scan messages drop to `debug` when the timer interval is short (under 10 seconds) so logs do not flood; manual scans and slower intervals stay at `info`.
+- **Logging**: **start of scan**, **no barcode**, and per-variant **`trying …`** lines are **`debug`**; a **successful decode** is always **`info`** with payload, decode pipeline label, and full **`scan_json`** metadata. Failures stay **`error`** / **`exception`**.
 - **Translations** for all [Home Assistant frontend languages](https://github.com/home-assistant/core/blob/dev/homeassistant/generated/languages.py). **English** and **Russian** are hand-written or reviewed; other locales came from automated translation and were spot-checked — fine for the UI, occasionally a bit stiff. PRs that polish wording are welcome.
 
 ## Requirements
@@ -72,8 +72,8 @@ Copy the `custom_components/qr_code_reader` folder from this repository into you
 
 - **Nothing decodes:** improve lighting, aim, and resolution; enable **grayscale enhancements**; as a last resort try **scaled variants** on capable hardware.
 - **Errors mentioning zbar / pyzbar:** install OS-level **ZBar** in the Home Assistant environment.
-- **Verbose logs on a fast interval:** set the logger to `debug` only when needed, e.g.  
-  `custom_components.qr_code_reader: debug` — routine timer messages for intervals under 10 s are already logged at debug.
+- **More detail while tuning:** set  
+  `custom_components.qr_code_reader: debug` to see scan starts, empty results, and internal decode attempts (`trying …` variants).
 
 ## License
 

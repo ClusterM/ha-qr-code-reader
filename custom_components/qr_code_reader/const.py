@@ -28,9 +28,6 @@ ATTR_QUALITY = "quality"
 ATTR_ORIENTATION = "orientation"
 ATTR_SCAN_JSON = "scan_json"
 
-# Timer-driven scans with interval below this use DEBUG for routine logs (less log spam).
-SCAN_ROUTINE_LOG_DEBUG_BELOW_SEC = 10
-
 SCALE_FACTORS: tuple[float, ...] = (0.35, 0.5, 0.65, 1.5, 2.0, 3.0)
 
 
